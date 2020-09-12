@@ -6,7 +6,7 @@ K_WANT_GENPATCHES="base extras"
 K_GENPATCHES_VER="1"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
-XANMOD_VERSION="cachy"
+XANMOD_CACHY_VERSION="1"
 ETYPE="sources"
 
 inherit kernel-2-src-prepare-overlay
