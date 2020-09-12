@@ -15,7 +15,7 @@ detect_version
 DESCRIPTION="Full XanMod and Cachy CPU Scheduler sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 HOMEPAGE="https://xanmod.org"
 LICENSE+=" CDDL"
-SRC_URI="https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.8.8.tar.xz https://sourceforge.net/projects/xanmod/files/experimental/cachy_cpu_sched/5.8.8-xanmod1-cachy/patch-5.8.8-xanmod1-cachy.xz ${GENPATCHES_URI}"
+SRC_URI="${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz https://sourceforge.net/projects/xanmod/files/experimental/cachy_cpu_sched/5.8.8-xanmod1-cachy/patch-5.8.8-xanmod1-cachy.xz ${GENPATCHES_URI}"
 
 UNIPATCH_LIST_DEFAULT=""
 UNIPATCH_LIST="${DISTDIR}/patch-5.8.8-xanmod1-cachy.xz"
