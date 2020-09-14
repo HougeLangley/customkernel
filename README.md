@@ -1,13 +1,39 @@
 # customkernel
 
-这里将集合各种定制 Linux 内核 ebuild 脚本
+## 三个定制 Linux 内核 ebuild
 
-到目前为止，完成两个比较主流的 Linux 内核和 ebuild 搭建。
+### Xanmod Cachy 内核
 
-第一个是基于 Xanmod，使用 Cachy 作为默认 CPU Scheduler，现阶段这个 CPU Scheduler 还处于比较初级的阶段，关于 Cachy 的算法就我目前理解的情况是这样的，任务分配给 CPU 后，它会坚持执行直到另一个 CPU 闲置，然后该任务才可能被拉到新的 CPU。禁用定期平衡的原因是利用任务在 CPU 缓存。
+[Xanmod](https://xanmod.org/) 是 Linux 第三方定制内核中非常著名的。原始 Xanmod 内核并没有对 CPU 调度器做非常特殊定制的情况下，能够在 [Phoronix Benchmark](https://www.phoronix.com/scan.php?page=article&item=xanmod-2020-kernel&num=3) 中击败众多对手，比方说 [Liquorix](https://liquorix.net/)。并且 Xanmod 的稳定版本在其官方主页支持基于 Debian 的所有发行版，当然，还有 [Archlinux](https://aur.archlinux.org/packages/linux-xanmod/) 和 [Gentoo](https://gitlab.com/src_prepare/src_prepare-overlay/-/tree/master/sys-kernel/xanmod-sources) 。那么既然已经有 Genoo 的 overlay 了，我为什么还要做一个 overlay 呢？
 
-当然啦，Xanmod 中也包含了其他特性，比方说 fsgsbase，支持 Linux 模块使用 zstd 压缩，GCC 优化等等～可用性还是很好的。
+1. [src_prepare overlay](https://gitlab.com/src_prepare/src_prepare-overlay) 只提供稳定版本的 Xanmod 内核
+2. 跟随上游 Xanmod 进行更新，Linux 主线更新的某些版本会选择性跳过
+3. 我选择的是 [Xanmod Cachy](https://sourceforge.net/projects/xanmod/files/experimental/cachy_cpu_sched/) 这个分支的主线，在 Xanmod 主页，基于 Cachy 调度器的内核属于实验性，然而我自己测试下来，响应非常快，所以我选择这个主线的内核到我的 overlay，这也是同 src_prepare 的差异
+4. config 配置同 Xanmod Cachy
+5. 添加 UKSM 补丁，这个补丁 Xanmod 并没有添加到主线
 
-第二个是基于 Project C 的 Linux 内核，本来我打算加入更多可支持的补丁，比方说 Zen 内核的优化，还有一些小的修改。但是因为能力不足，没有实现，后续逐渐学习后给它们加进去。
+关于 customkernel 内核中，Xanmod 将保持最小的变化给各位朋友。
 
-后续不会盲目增加更多内核，而是在此基础上优化和精进，希望大家多多支持。
+### Project C 内核
+
+[Project C](https://cchalpha.blogspot.com/) 是 Linux 内核中 CPU Scheduler 第三方补丁，Project C 主要包含两个 CPU 调度器，一个是 BMQ，另一个是 PDS，两者都是非常适合在非RT内核中使用，提高响应性是它们的共同目的，就目前测试的结果来看，当然是稍微老的内核，PDS 和 BMQ 都非常适合在 Linux 的游戏机中使用，参考这个[视频](https://youtu.be/phA-M1biogE)，PDS 效果更好。目前这个内核我只添加 Project C 补丁，fgsbase 和 UKSM 补丁，其余的补丁将来在通过测试慢慢加入。这个内核将遵循以下原则更新：
+
+1. 内核跟随 [Linux Kernel](https://www.kernel.org/) 官方主线，补丁跟随 Project C 主线，fgsbase 将在 5.9 内核融合主线，届时这个补丁将不复存在，UKSM 尽可能保持加入状态
+2. 希望将来将如更多提升性能的补丁
+
+### Cachy 内核
+
+[Cachy](https://github.com/hamadmarri/cachy-sched) 内核是 Linux 内核中 CPU Scheduler 的新成员(第三方)，就目前文档中能够获取的信息来看，这个调度器的最核心特点是：利用 CPU 缓存尽可能让任务在该 CPU 执行，直到另一个 CPU 空闲，任务被闲置 CPU 拉去（这里我理解的 CPU 是逻辑核心）。Cachy 调度器利用 CPU 缓存并且基于 Highest Response Ratio Next (HRRN) 策略。那么在 customkernel 源中，我将遵循以下原则持续更新：
+
+1. 上游跟随 [Linux Kernel](https://www.kernel.org/) 官方主线，补丁跟随 Cachy 主线
+2. 加上 fgsbase 补丁
+3. 加入 UKSM 补丁
+4. 加入 zen 补丁
+5. 加入 GCC 优化补丁
+6. 将来根据情况加入更多优化补丁
+
+## 写在最后
+
+以上就是该 overlay 现在和将来的目标，维护这三个 ebuild，持续更新，为了更好的性能，为了我们的爱——Linux，为了我的至爱——Wuxunmo
+
+希望大家多多提意见，多多提 issue，多多点❤❤❤
