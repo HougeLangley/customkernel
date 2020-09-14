@@ -2,7 +2,7 @@
 
 这里将集合各种定制 Linux 内核 ebuild 脚本
 
-到目前为止，完成两个比较主流的 Linux 内和 ebuild 搭建。
+到目前为止，完成两个比较主流的 Linux 内核和 ebuild 搭建。
 
 第一个是基于 Xanmod，使用 Cachy 作为默认 CPU Scheduler，现阶段这个 CPU Scheduler 还处于比较初级的阶段，关于 Cachy 的算法就我目前理解的情况是这样的，任务分配给 CPU 后，它会坚持执行直到另一个 CPU 闲置，然后该任务才可能被拉到新的 CPU。禁用定期平衡的原因是利用任务在 CPU 缓存。
 
