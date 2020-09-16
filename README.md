@@ -21,6 +21,8 @@
 1. 内核跟随 [Linux Kernel](https://www.kernel.org/) 官方主线，补丁跟随 Project C 主线，fsgsbase 将在 5.9 内核融合主线，届时这个补丁将不复存在，UKSM 尽可能保持加入状态
 2. 希望将来将如更多提升性能的补丁
 
+**现阶段 Project C 补丁存在的 [bug](https://gitlab.com/alfredchen/linux-prjc/-/issues/8)，尤其是在 AMD 的 Ryzen 处理器上会出现死机的现象，无法通过 SSH 进入系统查看，建议 CPU 是 Ryzen 的朋友不要使用，等待后续 bug 解决再使用**
+
 ### Cachy 内核
 
 [Cachy](https://github.com/hamadmarri/cachy-sched) 内核是 Linux 内核中 CPU Scheduler 的新成员(第三方)，就目前文档中能够获取的信息来看，这个调度器的最核心特点是：利用 CPU 缓存尽可能让任务在该 CPU 执行，直到另一个 CPU 空闲，任务被闲置 CPU 拉去（这里我理解的 CPU 是逻辑核心）。Cachy 调度器利用 CPU 缓存并且基于 Highest Response Ratio Next (HRRN) 策略。那么在 customkernel 源中，我将遵循以下原则持续更新：
