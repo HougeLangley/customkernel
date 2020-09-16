@@ -15,10 +15,10 @@ detect_version
 DESCRIPTION="Full Cachy CPU Scheduler sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 HOMEPAGE="https://github.com/hamadmarri/cachy-sched"
 LICENSE+=" CDDL"
-SRC_URI="${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz https://cdn.kernel.org/pub/linux/kernel/v5.x/patch-5.8.9.xz https://github.com/HougeLangley/customkernel/releases/download/cachy-r1/500HZ.xz https://github.com/HougeLangley/customkernel/releases/download/cachy-r1/aaoi.xz https://github.com/HougeLangley/customkernel/releases/download/cachy-r1/async_buffered_reads.xz https://github.com/HougeLangley/customkernel/releases/download/cachy-r1/cachy-5.8-r2.xz https://github.com/HougeLangley/customkernel/releases/download/cachy-r1/cpu-patches.xz https://github.com/HougeLangley/customkernel/releases/download/cachy-r1/fsgsbase.xz https://github.com/HougeLangley/customkernel/releases/download/cachy-r1/fsync.xz https://github.com/HougeLangley/customkernel/releases/download/cachy-r1/UKSM.xz https://github.com/HougeLangley/customkernel/releases/download/cachy-r1/zen.xz ${GENPATCHES_URI}"
+SRC_URI="${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz https://cdn.kernel.org/pub/linux/kernel/v5.x/patch-5.8.9.xz https://github.com/HougeLangley/customkernel/releases/download/cachy-r1/500HZ.xz https://github.com/HougeLangley/customkernel/releases/download/cachy-r1/aaoi.xz https://github.com/HougeLangley/customkernel/releases/download/cachy-r1/cachy-5.8-r2.xz https://github.com/HougeLangley/customkernel/releases/download/cachy-r1/cpu-patches.xz https://github.com/HougeLangley/customkernel/releases/download/cachy-r1/fsgsbase.xz https://github.com/HougeLangley/customkernel/releases/download/cachy-r1/fsync.xz https://github.com/HougeLangley/customkernel/releases/download/cachy-r1/UKSM.xz https://github.com/HougeLangley/customkernel/releases/download/cachy-r1/zen.xz ${GENPATCHES_URI}"
 
 UNIPATCH_LIST_DEFAULT=""
-UNIPATCH_LIST="${DISTDIR}/patch-5.8.9.xz ${DISTDIR}/cachy-5.8-r2.xz ${DISTDIR}/cpu-patches.xz ${DISTDIR}/fsgsbase.xz ${DISTDIR}/UKSM.xz ${DISTDIR}/zen.xz ${DISTDIR}/500HZ.xz ${DISTDIR}/aaoi.xz ${DISTDIR}/async_buffered_reads.xz ${DISTDIR}/fsync.xz "
+UNIPATCH_LIST="${DISTDIR}/patch-5.8.9.xz ${DISTDIR}/cachy-5.8-r2.xz ${DISTDIR}/cpu-patches.xz ${DISTDIR}/fsgsbase.xz ${DISTDIR}/UKSM.xz ${DISTDIR}/zen.xz ${DISTDIR}/500HZ.xz ${DISTDIR}/aaoi.xz ${DISTDIR}/fsync.xz "
 
 KEYWORDS="~amd64"
 
