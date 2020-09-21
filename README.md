@@ -19,7 +19,8 @@
 [Project C](https://cchalpha.blogspot.com/) 是 Linux 内核中 CPU Scheduler 第三方补丁，Project C 主要包含两个 CPU 调度器，一个是 BMQ，另一个是 PDS，两者都是非常适合在非RT内核中使用，提高响应性是它们的共同目的，就目前测试的结果来看，当然是稍微老的内核，PDS 和 BMQ 都非常适合在 Linux 的游戏机中使用，参考这个[视频](https://youtu.be/phA-M1biogE)，PDS 效果更好。目前这个内核我只添加 Project C 补丁，fsgsbase 和 UKSM 补丁，其余的补丁将来在通过测试慢慢加入。这个内核将遵循以下原则更新：
 
 1. 内核跟随 [Linux Kernel](https://www.kernel.org/) 官方主线，补丁跟随 Project C 主线，fsgsbase 将在 5.9 内核融合主线，届时这个补丁将不复存在，UKSM 尽可能保持加入状态
-2. 希望将来将如更多提升性能的补丁
+2. 2020年9月22日测试成功加入了 Lucjan 补丁集，不过舍弃了关于 Intel pstate 补丁，原作者要去掉，我还是保留了
+3. 下面的警告⚠还是需要注意，虽然现在从 r1 开始打上补丁，另外反映的情况是大部分 AMD 已经不会出现死机，但是大家还是要注意
 
 **现阶段 Project C 补丁存在的 [bug](https://gitlab.com/alfredchen/linux-prjc/-/issues/8)，尤其是在 AMD 的 Ryzen 处理器上会出现死机的现象，无法通过 SSH 进入系统查看，建议 CPU 是 Ryzen 的朋友不要使用，等待后续 bug 解决再使用**
 
