@@ -21,6 +21,7 @@ UNIPATCH_LIST_DEFAULT=""
 UNIPATCH_LIST="${DISTDIR}/patch-5.8.13.xz ${DISTDIR}/prjc_v5.8-r3.xz ${DISTDIR}/fsgsbase.xz ${DISTDIR}/UKSM.xz ${DISTDIR}/zstd.xz ${DISTDIR}/zen.xz ${DISTDIR}/cpu-patches.xz ${DISTDIR}/v5.8DWL.xz ${DISTDIR}/SC.xz ${DISTDIR}/elevator.xz ${DISTDIR}/750.xz ${DISTDIR}/2048.xz"
 
 KEYWORDS="~amd64"
+IUSE="experimental"
 
 src_prepare() {
 
