@@ -1,5 +1,7 @@
 # customkernel
 
+**请注意：从2020年10月2日开始，内核小版本号补丁跟随 Gentoo Genpatches，5.8.13 以后的内核将取消单独的小版本补丁，一方面能够保持和 Gentoo 的一致性，另一方面能够帮助我更好的维护。另外，在内核的 config 中的 CONFIG_LOCALVERSION="" 请大家还是给自己的版本取个名字，另一个源提供的 Xanmod 中是不提供 config 文件的，但是我的保留了原始的 .config 文件，一方面有助于使用者更好的编译，另一方面保留了这个内核配置文件中的优化部分，而我这个 overlay 中 config 文件夹中的 xanmod config 就删掉了，另外的两个保留，保留的是我自己使用的，各位根据具体情况酌情修改。最后，这个三个内核都可以安装 zfs-kmod，望周知**
+
 ## 三个定制 Linux 内核 ebuild
 
 ### Xanmod Cachy 内核
@@ -9,7 +11,7 @@
 1. [src_prepare overlay](https://gitlab.com/src_prepare/src_prepare-overlay) 只提供稳定版本的 Xanmod 内核
 2. 跟随上游 Xanmod 进行更新，Linux 主线更新的某些版本会选择性跳过
 3. 我选择的是 [Xanmod Cachy](https://sourceforge.net/projects/xanmod/files/experimental/cachy_cpu_sched/) 这个分支的主线，在 Xanmod 主页，基于 Cachy 调度器的内核属于实验性，然而我自己测试下来，响应非常快，所以我选择这个主线的内核到我的 overlay，这也是同 src_prepare 的差异
-4. config 配置同 Xanmod Cachy
+4. config 在内核文件夹中，.config 不会删除，内容同 Xanmod 官方提供的
 5. 添加 UKSM 补丁，这个补丁 Xanmod 并没有添加到主线
 
 关于 customkernel 内核中，Xanmod 将保持最小的变化给各位朋友。
