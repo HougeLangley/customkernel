@@ -25,6 +25,8 @@ IUSE="experimental"
 
 src_prepare() {
 
+	eapply "${FILESDIR}/cachy-5.8-r6.patch"
+
 	kernel-2-src-prepare-overlay_src_prepare
 
 }
