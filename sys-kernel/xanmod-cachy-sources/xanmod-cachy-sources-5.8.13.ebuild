@@ -15,10 +15,10 @@ detect_version
 DESCRIPTION="Full XanMod and UKSM sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 HOMEPAGE="https://xanmod.org"
 LICENSE+=" CDDL"
-SRC_URI="${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz https://github.com/HougeLangley/customkernel/releases/download/Xanmod-5.8.13/cachy.xz https://github.com/HougeLangley/customkernel/releases/download/Xanmod-5.8.13/patch-5.8.13-xanmod1.xz https://github.com/HougeLangley/customkernel/releases/download/%E6%9B%B4%E6%80%A7UKSM-5.8/UKSM.xz ${GENPATCHES_URI}"
+SRC_URI="${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz https://github.com/HougeLangley/customkernel/releases/download/Xanmod-5.8.13/patch-5.8.13-xanmod1.xz https://github.com/HougeLangley/customkernel/releases/download/%E6%9B%B4%E6%80%A7UKSM-5.8/UKSM.xz ${GENPATCHES_URI}"
 
 UNIPATCH_LIST_DEFAULT=""
-UNIPATCH_LIST="${DISTDIR}/patch-5.8.13-xanmod1.xz ${DISTDIR}/UKSM.xz ${DISTDIR}/cachy.xz"
+UNIPATCH_LIST="${DISTDIR}/patch-5.8.13-xanmod1.xz ${DISTDIR}/UKSM.xz"
 
 KEYWORDS="~amd64"
 
