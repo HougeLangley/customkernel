@@ -24,7 +24,28 @@ KEYWORDS="~amd64"
 
 src_prepare() {
 
-	eapply "${FILESDIR}/btrfs1.patch ${FILESDIR}/btrfs2.patch ${FILESDIR}/btrfs3.patch ${FILESDIR}/btrfs4.patch ${FILESDIR}/btrfs5.patch ${FILESDIR}/btrfs6.patch ${FILESDIR}/btrfs7.patch ${FILESDIR}/btrfs8.patch ${FILESDIR}/btrfs9.patch ${FILESDIR}/btrfs10.patch ${FILESDIR}/btrfs11.patch ${FILESDIR}/btrfs12.patch ${FILESDIR}/btrfs13.patch ${FILESDIR}/btrfs14.patch ${FILESDIR}/btrfs15.patch ${FILESDIR}/btrfs16.patch ${FILESDIR}/btrfs17.patch ${FILESDIR}/btrfs18.patch ${FILESDIR}/btrfs19.patch ${FILESDIR}/btrfs20.patch ${FILESDIR}/btrfs21.patch ${FILESDIR}/btrfs22.patch"
+	eapply "${FILESDIR}/btrfs1.patch"
+    eapply "${FILESDIR}/btrfs2.patch"
+    eapply "${FILESDIR}/btrfs3.patch"
+    eapply "${FILESDIR}/btrfs4.patch"
+    eapply "${FILESDIR}/btrfs5.patch"
+    eapply "${FILESDIR}/btrfs6.patch"
+    eapply "${FILESDIR}/btrfs7.patch"
+    eapply "${FILESDIR}/btrfs8.patch"
+    eapply "${FILESDIR}/btrfs9.patch"
+    eapply "${FILESDIR}/btrfs10.patch"
+    eapply "${FILESDIR}/btrfs11.patch"
+    eapply "${FILESDIR}/btrfs12.patch"
+    eapply "${FILESDIR}/btrfs13.patch"
+    eapply "${FILESDIR}/btrfs14.patch"
+    eapply "${FILESDIR}/btrfs15.patch"
+    eapply "${FILESDIR}/btrfs16.patch"
+    eapply "${FILESDIR}/btrfs17.patch"
+    eapply "${FILESDIR}/btrfs18.patch"
+    eapply "${FILESDIR}/btrfs19.patch"
+    eapply "${FILESDIR}/btrfs20.patch"
+    eapply "${FILESDIR}/btrfs21.patch"
+    eapply "${FILESDIR}/btrfs22.patch"
 
 	kernel-2-src-prepare-overlay_src_prepare
 
