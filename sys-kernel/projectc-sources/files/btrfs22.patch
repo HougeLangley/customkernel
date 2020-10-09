@@ -1,0 +1,25 @@
+diff --git a/include/linux/fs.h b/include/linux/fs.h
+index ac1e89872..bd7e1d37f 100644
+--- a/include/linux/fs.h
++++ b/include/linux/fs.h
+@@ -882,7 +882,7 @@ static inline loff_t i_size_read(const struct inode *inode)
+ 	preempt_enable();
+ 	return i_size;
+ #else
+-	return inode->i_size;
++	return READ_ONCE(inode->i_size);
+ #endif
+ }
+ 
+@@ -904,7 +904,7 @@ static inline void i_size_write(struct inode *inode, loff_t i_size)
+ 	inode->i_size = i_size;
+ 	preempt_enable();
+ #else
+-	inode->i_size = i_size;
++	WRITE_ONCE(inode->i_size, i_size);
+ #endif
+ }
+ 
+-- 
+2.28.0.585.ge1cfff6765
+

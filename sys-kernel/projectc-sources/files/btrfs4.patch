@@ -1,0 +1,16 @@
+diff --git a/fs/btrfs/file.c b/fs/btrfs/file.c
+index e485f0275..1b7988dad 100644
+--- a/fs/btrfs/file.c
++++ b/fs/btrfs/file.c
+@@ -1800,8 +1800,6 @@ static noinline ssize_t btrfs_buffered_write(struct kiocb *iocb,
+ 		cond_resched();
+ 
+ 		balance_dirty_pages_ratelimited(inode->i_mapping);
+-		if (dirty_pages < (fs_info->nodesize >> PAGE_SHIFT) + 1)
+-			btrfs_btree_balance_dirty(fs_info);
+ 
+ 		pos += copied;
+ 		num_written += copied;
+-- 
+2.28.0.585.ge1cfff6765
+

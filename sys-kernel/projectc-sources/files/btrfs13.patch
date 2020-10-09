@@ -1,0 +1,33 @@
+diff --git a/fs/btrfs/inode.c b/fs/btrfs/inode.c
+index cb2a6893e..5d711e5bb 100644
+--- a/fs/btrfs/inode.c
++++ b/fs/btrfs/inode.c
+@@ -2167,11 +2167,8 @@ static blk_status_t btrfs_submit_bio_start(void *private_data, struct bio *bio,
+ 				    u64 bio_offset)
+ {
+ 	struct inode *inode = private_data;
+-	blk_status_t ret = 0;
+ 
+-	ret = btrfs_csum_one_bio(inode, bio, 0, 0);
+-	BUG_ON(ret); /* -ENOMEM */
+-	return 0;
++	return btrfs_csum_one_bio(inode, bio, 0, 0);
+ }
+ 
+ /*
+@@ -7611,10 +7608,8 @@ static blk_status_t btrfs_submit_bio_start_direct_io(void *private_data,
+ 				    struct bio *bio, u64 offset)
+ {
+ 	struct inode *inode = private_data;
+-	blk_status_t ret;
+-	ret = btrfs_csum_one_bio(inode, bio, offset, 1);
+-	BUG_ON(ret); /* -ENOMEM */
+-	return 0;
++
++	return btrfs_csum_one_bio(inode, bio, offset, 1);
+ }
+ 
+ static void btrfs_end_dio_bio(struct bio *bio)
+-- 
+2.28.0.585.ge1cfff6765
+

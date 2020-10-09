@@ -1,0 +1,15 @@
+diff --git a/fs/btrfs/inode.c b/fs/btrfs/inode.c
+index 5d711e5bb..b0b318130 100644
+--- a/fs/btrfs/inode.c
++++ b/fs/btrfs/inode.c
+@@ -6753,7 +6753,6 @@ struct extent_map *btrfs_get_extent(struct btrfs_inode *inode,
+ 		free_extent_map(em);
+ 		return ERR_PTR(err);
+ 	}
+-	BUG_ON(!em); /* Error is always set */
+ 	return em;
+ }
+ 
+-- 
+2.28.0.585.ge1cfff6765
+
