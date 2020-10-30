@@ -24,8 +24,6 @@ KEYWORDS="~amd64"
 
 src_prepare() {
 
-    eapply "${FILESDIR}/fsync59.patch"
-
-	kernel-2-src-prepare-overlay_src_prepare
+    kernel-2-src-prepare-overlay_src_prepare
 
 }
