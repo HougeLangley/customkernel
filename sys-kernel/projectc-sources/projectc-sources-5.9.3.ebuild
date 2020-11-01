@@ -15,10 +15,10 @@ detect_version
 DESCRIPTION="Full Project-C CPU Scheduler sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 HOMEPAGE="https://cchalpha.blogspot.com/"
 LICENSE+=" CDDL"
-SRC_URI="${KERNEL_BASE_URI}/linux-5.9.tar.xz https://cdn.kernel.org/pub/linux/kernel/v5.x/patch-5.9.3.xz https://github.com/HougeLangley/customkernel/releases/download/Patches-Reversion/prjc_v5.9-r1.xz https://github.com/HougeLangley/customkernel/releases/download/Patches-Reversion/500.xz https://github.com/HougeLangley/customkernel/releases/download/5.9/mm59.xz https://github.com/HougeLangley/customkernel/releases/download/5.9/elevator59.xz https://github.com/HougeLangley/customkernel/releases/download/5.9/CPUf59.xz https://github.com/HougeLangley/customkernel/releases/download/5.9/cpu59.xz https://github.com/HougeLangley/customkernel/releases/download/5.9/25659.xz https://github.com/HougeLangley/customkernel/releases/download/Patches-Reversion/UKSM59R4.xz https://github.com/HougeLangley/customkernel/releases/download/5.9/zen59.xz ${GENPATCHES_URI}"
+SRC_URI="${KERNEL_BASE_URI}/linux-5.9.tar.xz https://github.com/HougeLangley/customkernel/releases/download/Patches-Reversion/0001-patch-5.9.3.xz https://github.com/HougeLangley/customkernel/releases/download/Patches-Reversion/prjc_v5.9-r1.xz https://github.com/HougeLangley/customkernel/releases/download/Patches-Reversion/500.xz https://github.com/HougeLangley/customkernel/releases/download/5.9/mm59.xz https://github.com/HougeLangley/customkernel/releases/download/5.9/elevator59.xz https://github.com/HougeLangley/customkernel/releases/download/5.9/CPUf59.xz https://github.com/HougeLangley/customkernel/releases/download/5.9/cpu59.xz https://github.com/HougeLangley/customkernel/releases/download/5.9/25659.xz https://github.com/HougeLangley/customkernel/releases/download/Patches-Reversion/UKSM59R4.xz https://github.com/HougeLangley/customkernel/releases/download/5.9/zen59.xz ${GENPATCHES_URI}"
 
 UNIPATCH_LIST_DEFAULT=""
-UNIPATCH_LIST="${DISTDIR}/patch-5.9.3.xz ${DISTDIR}/prjc_v5.9-r1.xz ${DISTDIR}/mm59.xz ${DISTDIR}/elevator59.xz ${DISTDIR}/CPUf59.xz ${DISTDIR}/cpu59.xz ${DISTDIR}/500.xz ${DISTDIR}/25659.xz ${DISTDIR}/UKSM59R4.xz ${DISTDIR}/zen59.xz"
+UNIPATCH_LIST="${DISTDIR}/0001-patch-5.9.3.xz ${DISTDIR}/prjc_v5.9-r1.xz ${DISTDIR}/mm59.xz ${DISTDIR}/elevator59.xz ${DISTDIR}/CPUf59.xz ${DISTDIR}/cpu59.xz ${DISTDIR}/500.xz ${DISTDIR}/25659.xz ${DISTDIR}/UKSM59R4.xz ${DISTDIR}/zen59.xz"
 
 KEYWORDS="~amd64"
 
