@@ -24,7 +24,6 @@ KEYWORDS="~amd64"
 
 src_prepare() {
 
-    eapply "${FILESDIR}/glitched-muqss.patch"
     eapply "${FILESDIR}/glitched-ondemand-muqss.patch"
     eapply "${FILESDIR}/fsync59.patch"
 
