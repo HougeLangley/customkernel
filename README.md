@@ -41,9 +41,9 @@
 6. 加入 zstd 补丁
 7. 将来根据情况加入更多优化补丁
 
-### Houge 内核，现在的名字叫做 houge-sources，将在 5.10 内核开始改名叫做 liyuan-sources，以此纪念我逝去的爱情
+### Houge 内核
 
-liyuan-sources，完全是根据我个人对第三方内核的理解，自己定制的，Cachy 虽然想法新颖，但是不稳定，pds/bmq 也存在相同问题。而我更加偏向于 MuQSS，但是这个内核已经包含在 Gentoo 源中。所以我就另外取名了。
+完全是根据我个人对第三方内核的理解，自己定制的，Cachy 虽然想法新颖，但是不稳定，pds/bmq 也存在相同问题。而我更加偏向于 MuQSS，但是这个内核已经包含在 Gentoo 源中。所以我就另外取名了。
 
 1. 使用 MuQSS 最新版补丁，默认时钟频率是 100Hz；
 2. 加入了  [Piotr Górski](https://gitlab.com/sirlucjan/kernel-patches/-/tree/master) 提供的 Zen 优化补丁；
@@ -53,6 +53,6 @@ liyuan-sources，完全是根据我个人对第三方内核的理解，自己定
 
 ## 写在最后
 
-以上就是该 overlay 现在和将来的目标，维护这三个 ebuild，持续更新，为了更好的性能，为了我们共同的的爱—Linux，为了我永远逝去爱——Liyuan
+以上就是该 overlay 现在和将来的目标，维护这三个 ebuild，持续更新，为了更好的性能，为了我们共同的的爱—Linux。
 
 希望大家多多提意见，多多提 issue，多多点 ❤❤❤
