@@ -1,0 +1,146 @@
+*/* PYTHON_TARGETS: -python2_7
+*/* PYTHON_COMPAT: python3_7 python3_8 python3_9 python3_10
+# required by media-libs/mesa-20.2.0_rc4::gentoo[-video_cards_radeon,-video_cards_r600,-video_cards_r200,-video_cards_r300,video_cards_radeonsi,-video_cards_r100]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by dev-qt/qtgui-5.15.1::gentoo[-gles2-only]
+# required by app-text/poppler-20.09.0::gentoo[qt5]
+# required by net-print/cups-filters-1.28.2::gentoo
+# required by net-print/cups-2.3.3-r1::gentoo
+# required by app-text/ghostscript-gpl-9.53.1::gentoo[cups]
+>=x11-libs/libdrm-2.4.102 video_cards_radeon
+# required by dev-lang/ruby-2.7.1-r2::gentoo
+# required by virtual/rubygems-16::gentoo[ruby_targets_ruby27]
+# required by dev-lang/ruby-2.5.8-r1::gentoo
+# required by virtual/ruby-ssl-11::gentoo[ruby_targets_ruby25]
+# required by dev-ruby/racc-1.4.16-r1::gentoo
+# required by dev-ruby/rdoc-6.2.0::gentoo[ruby_targets_ruby26]
+# required by dev-ruby/bundler-2.1.4::gentoo[ruby_targets_ruby25,doc]
+# required by dev-lang/ruby-2.6.6-r2::gentoo
+# required by dev-ruby/rubygems-3.1.4::gentoo[ruby_targets_ruby26]
+>=dev-ruby/minitest-5.14.2 ruby_targets_ruby27
+# required by dev-lang/ruby-2.7.1-r2::gentoo
+# required by virtual/rubygems-16::gentoo[ruby_targets_ruby27]
+# required by dev-lang/ruby-2.5.8-r1::gentoo
+# required by virtual/ruby-ssl-11::gentoo[ruby_targets_ruby25]
+# required by dev-ruby/racc-1.4.16-r1::gentoo
+# required by dev-ruby/rdoc-6.2.0::gentoo[ruby_targets_ruby26]
+# required by dev-ruby/bundler-2.1.4::gentoo[ruby_targets_ruby25,doc]
+# required by dev-lang/ruby-2.6.6-r2::gentoo
+# required by dev-ruby/rubygems-3.1.4::gentoo[ruby_targets_ruby26]
+>=dev-ruby/net-telnet-0.2.0 ruby_targets_ruby27
+# required by dev-lang/ruby-2.7.1-r2::gentoo
+# required by virtual/rubygems-16::gentoo[ruby_targets_ruby27]
+# required by dev-lang/ruby-2.5.8-r1::gentoo
+# required by virtual/ruby-ssl-11::gentoo[ruby_targets_ruby25]
+# required by dev-ruby/racc-1.4.16-r1::gentoo
+# required by dev-ruby/rdoc-6.2.0::gentoo[ruby_targets_ruby26]
+# required by dev-ruby/bundler-2.1.4::gentoo[ruby_targets_ruby25,doc]
+# required by dev-lang/ruby-2.6.6-r2::gentoo
+# required by dev-ruby/rubygems-3.1.4::gentoo[ruby_targets_ruby26]
+>=dev-ruby/power_assert-1.2.0 ruby_targets_ruby27
+# required by dev-lang/ruby-2.7.1-r2::gentoo
+# required by virtual/rubygems-16::gentoo[ruby_targets_ruby27]
+# required by dev-lang/ruby-2.5.8-r1::gentoo
+# required by virtual/ruby-ssl-11::gentoo[ruby_targets_ruby25]
+# required by dev-ruby/racc-1.4.16-r1::gentoo
+# required by dev-ruby/rdoc-6.2.0::gentoo[ruby_targets_ruby26]
+# required by dev-ruby/bundler-2.1.4::gentoo[ruby_targets_ruby25,doc]
+# required by dev-lang/ruby-2.6.6-r2::gentoo
+# required by dev-ruby/rubygems-3.1.4::gentoo[ruby_targets_ruby26]
+>=dev-ruby/rake-13.0.1 ruby_targets_ruby27
+# required by dev-lang/ruby-2.7.1-r2::gentoo
+# required by virtual/rubygems-16::gentoo[ruby_targets_ruby27]
+# required by dev-lang/ruby-2.5.8-r1::gentoo
+# required by virtual/ruby-ssl-11::gentoo[ruby_targets_ruby25]
+# required by dev-ruby/racc-1.4.16-r1::gentoo
+# required by dev-ruby/rdoc-6.2.0::gentoo[ruby_targets_ruby26]
+# required by dev-ruby/bundler-2.1.4::gentoo[ruby_targets_ruby25,doc]
+# required by dev-lang/ruby-2.6.6-r2::gentoo
+# required by dev-ruby/rubygems-3.1.4::gentoo[ruby_targets_ruby26]
+>=dev-ruby/test-unit-3.3.6 ruby_targets_ruby27
+# required by dev-lang/ruby-2.7.1-r2::gentoo
+# required by virtual/rubygems-16::gentoo[ruby_targets_ruby27]
+# required by dev-lang/ruby-2.5.8-r1::gentoo
+# required by virtual/ruby-ssl-11::gentoo[ruby_targets_ruby25]
+# required by dev-ruby/racc-1.4.16-r1::gentoo
+# required by dev-ruby/rdoc-6.2.0::gentoo[ruby_targets_ruby26]
+# required by dev-ruby/bundler-2.1.4::gentoo[ruby_targets_ruby25,doc]
+# required by dev-lang/ruby-2.6.6-r2::gentoo
+# required by dev-ruby/rubygems-3.1.4::gentoo[ruby_targets_ruby26]
+>=dev-ruby/xmlrpc-0.3.0 ruby_targets_ruby27
+# required by dev-lang/ruby-2.7.1-r2::gentoo
+# required by virtual/rubygems-16::gentoo[ruby_targets_ruby27]
+# required by dev-lang/ruby-2.5.8-r1::gentoo
+# required by virtual/ruby-ssl-11::gentoo[ruby_targets_ruby25]
+# required by dev-ruby/racc-1.4.16-r1::gentoo
+# required by dev-ruby/rdoc-6.2.0::gentoo[ruby_targets_ruby26]
+# required by dev-lang/ruby-2.6.6-r2::gentoo[rdoc]
+# required by dev-ruby/rubygems-3.1.4::gentoo[ruby_targets_ruby26]
+>=dev-ruby/bundler-2.1.4 ruby_targets_ruby27
+# required by dev-lang/ruby-2.7.1-r2::gentoo
+# required by virtual/rubygems-16::gentoo[ruby_targets_ruby27]
+# required by dev-lang/ruby-2.5.8-r1::gentoo
+# required by virtual/ruby-ssl-11::gentoo[ruby_targets_ruby25]
+# required by dev-ruby/racc-1.4.16-r1::gentoo
+# required by dev-ruby/rdoc-6.2.0::gentoo[ruby_targets_ruby26]
+# required by dev-ruby/bundler-2.1.4::gentoo[ruby_targets_ruby25,doc]
+# required by dev-lang/ruby-2.6.6-r2::gentoo
+# required by dev-ruby/rubygems-3.1.4::gentoo[ruby_targets_ruby26]
+>=dev-ruby/did_you_mean-1.4.0 ruby_targets_ruby27
+# required by dev-lang/ruby-2.7.1-r2::gentoo
+# required by virtual/rubygems-16::gentoo[ruby_targets_ruby27]
+# required by dev-lang/ruby-2.5.8-r1::gentoo
+# required by virtual/ruby-ssl-11::gentoo[ruby_targets_ruby25]
+# required by dev-ruby/racc-1.4.16-r1::gentoo
+# required by dev-ruby/rdoc-6.2.0::gentoo[ruby_targets_ruby26]
+# required by dev-ruby/bundler-2.1.4::gentoo[ruby_targets_ruby25,doc]
+# required by dev-lang/ruby-2.6.6-r2::gentoo
+# required by dev-ruby/rubygems-3.1.4::gentoo[ruby_targets_ruby26]
+>=dev-ruby/json-2.3.1 ruby_targets_ruby27
+# required by dev-lang/ruby-2.7.1-r2::gentoo[rdoc]
+# required by virtual/rubygems-16::gentoo[ruby_targets_ruby27]
+# required by dev-lang/ruby-2.5.8-r1::gentoo
+# required by virtual/ruby-ssl-11::gentoo[ruby_targets_ruby25]
+# required by dev-ruby/racc-1.4.16-r1::gentoo
+>=dev-ruby/rdoc-6.2.0 ruby_targets_ruby27
+# required by dev-lang/ruby-2.7.1-r2::gentoo
+# required by dev-libs/ocl-icd-2.2.12-r3::gentoo
+# required by virtual/opencl-3-r1::gentoo
+# required by dev-libs/amdgpu-pro-opencl-19.30.838629::gentoo
+# required by dev-libs/amdgpu-pro-opencl (argument)
+>=virtual/rubygems-16 ruby_targets_ruby27
+# required by virtual/rubygems-16::gentoo[ruby_targets_ruby27]
+# required by dev-lang/ruby-2.5.8-r1::gentoo
+# required by virtual/ruby-ssl-11::gentoo[ruby_targets_ruby25]
+# required by dev-ruby/racc-1.4.16-r1::gentoo
+# required by dev-ruby/rdoc-6.2.0::gentoo[ruby_targets_ruby26]
+# required by dev-lang/ruby-2.7.1-r2::gentoo[rdoc]
+# required by dev-libs/ocl-icd-2.2.12-r3::gentoo
+# required by virtual/opencl-3-r1::gentoo
+# required by dev-libs/amdgpu-pro-opencl-19.30.838629::gentoo
+# required by dev-libs/amdgpu-pro-opencl (argument)
+>=dev-ruby/rubygems-3.1.4 ruby_targets_ruby27
+# required by dev-ruby/rdoc-6.2.0::gentoo[ruby_targets_ruby27]
+# required by dev-lang/ruby-2.7.1-r2::gentoo[rdoc]
+# required by virtual/ruby-ssl-11::gentoo[ruby_targets_ruby27]
+# required by dev-ruby/racc-1.4.16-r1::gentoo
+>=dev-ruby/kpeg-1.1.0-r1 ruby_targets_ruby27
+# required by dev-ruby/rdoc-6.2.0::gentoo[ruby_targets_ruby27]
+# required by dev-lang/ruby-2.7.1-r2::gentoo[rdoc]
+# required by virtual/ruby-ssl-11::gentoo[ruby_targets_ruby27]
+# required by dev-ruby/rubygems-3.1.4::gentoo[ruby_targets_ruby27]
+# required by virtual/rubygems-16::gentoo[ruby_targets_ruby27]
+# required by dev-lang/ruby-2.6.6-r2::gentoo
+# required by dev-ruby/did_you_mean-1.4.0::gentoo[ruby_targets_ruby26]
+>=dev-ruby/racc-1.4.16-r1 ruby_targets_ruby27
+# required by dev-ruby/racc-1.4.16-r1::gentoo[ruby_targets_ruby27]
+# required by dev-ruby/rdoc-6.2.0::gentoo[ruby_targets_ruby26]
+# required by dev-lang/ruby-2.7.1-r2::gentoo[rdoc]
+# required by dev-ruby/rubygems-3.1.4::gentoo[ruby_targets_ruby27]
+# required by virtual/rubygems-16::gentoo[ruby_targets_ruby27]
+# required by dev-lang/ruby-2.6.6-r2::gentoo
+# required by dev-ruby/did_you_mean-1.4.0::gentoo[ruby_targets_ruby26]
+>=virtual/ruby-ssl-11 ruby_targets_ruby27
+# required by www-client/firefox-80.0.1-r1::gentoo[system-libvpx]
+# required by firefox (argument)
+>=media-libs/libvpx-1.9.0 postproc
