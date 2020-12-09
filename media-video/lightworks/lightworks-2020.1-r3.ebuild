@@ -19,7 +19,6 @@ IUSE=""
 RDEPEND="
 	dev-libs/openssl
 	dev-libs/glib
-	dev-libs/libedit
 	dev-libs/atk
 	dev-libs/expat
 	dev-libs/libffi
@@ -62,7 +61,8 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	!app-arch/deb2targz
-	app-arch/unzip"
+	app-arch/unzip
+	x11-apps/mkfontdir"
 
 S="${WORKDIR}"
 
