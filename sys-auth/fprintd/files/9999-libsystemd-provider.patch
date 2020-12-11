@@ -1,0 +1,40 @@
+diff --git a/meson.build b/meson.build
+index 66aa2f7..af5f099 100644
+--- a/meson.build
++++ b/meson.build
+@@ -84,7 +84,7 @@ gmodule_dep = dependency('gmodule-2.0', version: '>=' + glib_min_version)
+ libfprint_dep = dependency('libfprint-2', version: '>=' + libfprint_min_version)
+ polkit_gobject_dep = dependency('polkit-gobject-1', version: '>= 0.91')
+ dbus_dep = dependency('dbus-1', required: false)
+-libsystemd_dep = dependency('libsystemd', required: get_option('pam'))
++libsystemd_dep = dependency(get_option('libsystemd'), required: get_option('pam'))
+ pam_dep = cc.find_library('pam',
+     required: get_option('pam'),
+     has_headers: 'security/pam_modules.h',
+@@ -94,10 +94,10 @@ pod2man = find_program('pod2man', required: get_option('man'))
+ xsltproc = find_program('xsltproc', required: get_option('gtk_doc'))
+ 
+ # StateDirectory was introduced in systemd 235
+-systemd_dep = dependency('systemd', version: '>= 235')
+ systemd_unit_dir = get_option('systemd_system_unit_dir')
+ 
+ if systemd_unit_dir == ''
++    systemd_dep = dependency('systemd', version: '>= 235')
+     systemd_unit_dir = systemd_dep.get_pkgconfig_variable('systemdsystemunitdir')
+ endif
+ 
+diff --git a/meson_options.txt b/meson_options.txt
+index be31fe1..7f82f95 100644
+--- a/meson_options.txt
++++ b/meson_options.txt
+@@ -6,6 +6,10 @@ option('man',
+     description: 'Generate the man files',
+     type: 'boolean',
+     value: true)
++option('libsystemd',
++    description: 'Libsystemd provider (libsystemd or libelogind)',
++    type: 'string',
++    value: 'libsystemd')
+ option('systemd_system_unit_dir',
+     description: 'Directory for systemd service files',
+     type: 'string')
