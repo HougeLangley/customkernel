@@ -61,8 +61,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	!app-arch/deb2targz
-	app-arch/unzip
-	x11-apps/mkfontdir"
+	app-arch/unzip"
 
 S="${WORKDIR}"
 
