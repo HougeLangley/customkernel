@@ -4,11 +4,11 @@
 
 EAPI="6"
 
-inherit eutils
+inherit eutils rpm
 
 DESCRIPTION="Lightworks Beta Version, Just For Testing"
 HOMEPAGE="http://www.lwks.com/"
-SRC_URI="https://github.com/HougeLangley/customkernel/releases/download/LWS/lightworks-beta-2021.1-r1.deb"
+SRC_URI="https://github.com/HougeLangley/customkernel/releases/download/LWS/Lightworks-2021.1-Beta-126396.rpm"
 
 LICENSE="EditShare"
 SLOT="0"
@@ -19,6 +19,7 @@ IUSE=""
 RDEPEND="
 	dev-libs/openssl
 	dev-libs/glib
+	dev-libs/libedit
 	dev-libs/atk
 	dev-libs/expat
 	dev-libs/libffi
@@ -60,14 +61,13 @@ RDEPEND="
 "
 
 DEPEND="${RDEPEND}
-	!app-arch/deb2targz
+	!app-arch/rpm2targz
 	app-arch/unzip"
 
 S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
-	unpack ./data.tar.xz
 }
 
 src_prepare() {
