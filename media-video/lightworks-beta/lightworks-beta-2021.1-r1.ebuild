@@ -61,7 +61,7 @@ RDEPEND="
 "
 
 DEPEND="${RDEPEND}
-	!app-arch/rpm2targz
+	app-arch/rpm2targz
 	app-arch/unzip"
 
 S="${WORKDIR}"
