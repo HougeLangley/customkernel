@@ -86,7 +86,6 @@ src_install() {
 	doins -r usr/lib/${PN}/* || die "doins lib failed"
 
 	exeinto /usr/lib64/${PN}
-	doexe usr/lib/${PN}/spawn || die "doins lib-exe failed"
 	doexe usr/lib/${PN}/ntcardvt || die "doins lib-exe failed"
 
 	fperms a+rw "usr/share/lightworks/Preferences"
