@@ -31,7 +31,7 @@ src_prepare() {
     eapply "${FILESDIR}/0005-fsync.patch"
     eapply "${FILESDIR}/0006-UKSM.patch"
     eapply "${FILESDIR}/0007-graysky.patch"
-    eapply "${FILESDIR}/0012-misc.patch"
+    eapply "${FILESDIR}/0013-misc.patch"
 
 	kernel-2-src-prepare-overlay_src_prepare
 
