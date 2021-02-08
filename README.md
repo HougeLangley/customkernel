@@ -29,7 +29,7 @@
 
 [Xanmod UKSM 内核](https://https://github.com/HougeLangley/Xanmod-UKSM) 内核是我私自魔改的，最早的时候 Xanmod Linux 内核中 是包含了 UKSM 补丁，但是后来因为XiaNai 没有继续更新，于是这个补丁就放弃继续维护，也就被剔除了，不过幸运的是我在 Arch 社区找到了目前仍然在继续小幅度维护的 UKSM 补丁，于是就放到这里，提供给大家。之前我本来还想维护自己的内核，但是无奈 MuQSS 补丁提供的性能有限，放弃了。
 
-1. 上游跟随 [Xanmod 内核](https://github.com/xanmod/linux)) 主线，持续更新
+1. 上游跟随 [Xanmod 内核](https://github.com/xanmod/linux) 主线，持续更新
 2. 加入 UKSM 补丁
 3. 加入 Archlinux 中 USER_NS_UNPRIVILEGED 的一些微调补丁以方便某些应用程序运行
 4. 加入 GCC 优化补丁
