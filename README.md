@@ -25,16 +25,18 @@
 2. 加入了 zen-kenrel 的一些微调补丁魔改
 3. bcachefs 文件系统的支持
 
-### Houge 内核
+### Xanmod UKSM 内核
 
-[Houge 内核](https://github.com/HougeLangley/customkernel) 内核是我私自魔改的，Linux 内核中 CPU Scheduler 使用的是 MuQSS，就是 CK 内核针对多线程的那个补丁。遵循以下原则持续更新：
+[Xanmod UKSM 内核](https://https://github.com/HougeLangley/Xanmod-UKSM) 内核是我私自魔改的，最早的时候 Xanmod Linux 内核中 是包含了 UKSM 补丁，但是后来因为XiaNai 没有继续更新，于是这个补丁就放弃继续维护，也就被剔除了，不过幸运的是我在 Arch 社区找到了目前仍然在继续小幅度维护的 UKSM 补丁，于是就放到这里，提供给大家。之前我本来还想维护自己的内核，但是无奈 MuQSS 补丁提供的性能有限，放弃了。
 
-1. 上游跟随 [CK 内核](https://ck-hack.blogspot.com/)) 的 MuQSS 补丁集（如果中途断裂开，Houge 内核也将暂停维护，如果大家想使用其他的，可以考虑 BMQ 作为替代）
+1. 上游跟随 [Xanmod 内核](https://github.com/xanmod/linux)) 主线，持续更新
 2. 加入 UKSM 补丁
-3. 加入 zen-kernel 的一些微调补丁魔改
+3. 加入 Archlinux 中 USER_NS_UNPRIVILEGED 的一些微调补丁以方便某些应用程序运行
 4. 加入 GCC 优化补丁
 
 ## 写在最后
+
+Xanmod 内核补丁是目前全网性能最好的，突出表现在响应速度。Houge自己的内核魔改方案目前没有能够超越 Xanmod 的方案，大家迁移到 Xanmod UKSM 吧，这里唯一比 gentoo-zh 官方源增加的内容是增加了 Makefile 的魔改，做了 -Ofast -flto 的激进优化，其他没有什么特殊的，希望大家喜欢。
 
 以上就是该 overlay 现在和将来的目标，维护这三个 ebuild，持续更新，为了更好的性能，为了我们共同的挚爱—Linux Kernel。
 
