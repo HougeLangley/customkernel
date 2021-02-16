@@ -18,7 +18,7 @@ LICENSE+=" CDDL"
 SRC_URI="${KERNEL_BASE_URI}/linux-5.11.tar.xz https://github.com/HougeLangley/customkernel/releases/download/Kernel-v5.11.x/0002-prjc_v5.11-r0.patch.xz ${GENPATCHES_URI}"
 
 UNIPATCH_LIST_DEFAULT=""
-UNIPATCH_LIST="${DISTDIR}/0002-prjc_v5.11-r0.xz"
+UNIPATCH_LIST="${DISTDIR}/0002-prjc_v5.11-r0.patch.xz"
 
 KEYWORDS="~amd64"
 
