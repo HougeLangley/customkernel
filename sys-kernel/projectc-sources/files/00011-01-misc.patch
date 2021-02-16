@@ -12,24 +12,3 @@ index bf7ecab5d9e5..142e9dae2837 100644
  #if IS_ENABLED(CONFIG_HID_MAYFLASH)
  	{ HID_USB_DEVICE(USB_VENDOR_ID_DRAGONRISE, USB_DEVICE_ID_DRAGONRISE_PS3) },
 -- 
-
-diff --git a/drivers/cpufreq/Kconfig b/drivers/cpufreq/Kconfig
-index 2c7171e0b0010..85de313ddec29 100644
---- a/drivers/cpufreq/Kconfig
-+++ b/drivers/cpufreq/Kconfig
-@@ -71,7 +71,6 @@ config CPU_FREQ_DEFAULT_GOV_USERSPACE
- 
- config CPU_FREQ_DEFAULT_GOV_ONDEMAND
- 	bool "ondemand"
--	depends on !(X86_INTEL_PSTATE && SMP)
- 	select CPU_FREQ_GOV_ONDEMAND
- 	select CPU_FREQ_GOV_PERFORMANCE
- 	help
-@@ -83,7 +84,6 @@ config CPU_FREQ_DEFAULT_GOV_ONDEMAND
- 
- config CPU_FREQ_DEFAULT_GOV_CONSERVATIVE
- 	bool "conservative"
--	depends on !(X86_INTEL_PSTATE && SMP)
- 	select CPU_FREQ_GOV_CONSERVATIVE
- 	select CPU_FREQ_GOV_PERFORMANCE
- 	help
