@@ -6,7 +6,7 @@ K_WANT_GENPATCHES="base extras"
 K_GENPATCHES_VER="1"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
-PROJECTC_VERSION="r2"
+PROJECTC_VERSION="r0"
 ETYPE="sources"
 
 inherit kernel-2-src-prepare-overlay
@@ -15,10 +15,10 @@ detect_version
 DESCRIPTION="Full Project-C CPU Scheduler sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 HOMEPAGE="https://cchalpha.blogspot.com/"
 LICENSE+=" CDDL"
-SRC_URI="${KERNEL_BASE_URI}/linux-5.10.tar.xz https://github.com/HougeLangley/customkernel/releases/download/Kernel-5.10-Patches/0001-patch-5.10.5.xz https://github.com/HougeLangley/customkernel/releases/download/Kernel-5.10-Patches/0002-prjc_v5.10-r2.xz ${GENPATCHES_URI}"
+SRC_URI="${KERNEL_BASE_URI}/linux-5.11.tar.xz https://github.com/HougeLangley/customkernel/releases/download/Kernel-v5.11.x/0002-prjc_v5.11-r0.patch.xz ${GENPATCHES_URI}"
 
 UNIPATCH_LIST_DEFAULT=""
-UNIPATCH_LIST="${DISTDIR}/0001-patch-5.10.5.xz ${DISTDIR}/0002-prjc_v5.10-r2.xz"
+UNIPATCH_LIST="${DISTDIR}/0002-prjc_v5.11-r0.xz"
 
 KEYWORDS="~amd64"
 
@@ -31,6 +31,7 @@ src_prepare() {
     eapply "${FILESDIR}/0005-fsync.patch"
     eapply "${FILESDIR}/0006-UKSM.patch"
     eapply "${FILESDIR}/0007-graysky.patch"
+    eapply "${FILESDIR}/0011-01-misc.patch"
 
 	kernel-2-src-prepare-overlay_src_prepare
 
