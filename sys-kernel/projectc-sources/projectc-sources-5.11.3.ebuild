@@ -32,7 +32,7 @@ src_prepare() {
     eapply "${FILESDIR}/0006-UKSM-reversion01.patch"
     eapply "${FILESDIR}/0007-graysky.patch"
     eapply "${FILESDIR}/0008-futex2_interface.patch"
-    eapply "${FILESDIR}/0011-02-misc.patch"
+    eapply "${FILESDIR}/0011-03-misc.patch"
 
 	kernel-2-src-prepare-overlay_src_prepare
 
