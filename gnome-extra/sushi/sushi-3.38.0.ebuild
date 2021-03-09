@@ -6,7 +6,7 @@ inherit gnome.org meson xdg
 
 DESCRIPTION="A quick previewer for Nautilus, the GNOME file manager"
 HOMEPAGE="https://git.gnome.org/browse/sushi"
-SRC_URI+="https://github.com/HougeLangley/customkernel/releases/download/OtherApps/sushi-3.38.0.tar.xz"
+SRC_URI="https://github.com/HougeLangley/customkernel/releases/download/OtherApps/sushi-3.38.0.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0"
