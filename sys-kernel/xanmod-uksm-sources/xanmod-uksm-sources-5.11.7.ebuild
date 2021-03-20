@@ -14,10 +14,17 @@ detect_version
 DESCRIPTION="Xanmod and UKSM sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 HOMEPAGE="https://xanmod.org/"
 LICENSE+=" CDDL"
-SRC_URI="${KERNEL_BASE_URI}/linux-5.11.tar.xz https://github.com/HougeLangley/customkernel/releases/download/Kernel-v5.11.x/0001-patch-5.11.7-xanmod1.xz ${GENPATCHES_URI}"
+SRC_URI="
+         ${KERNEL_BASE_URI}/linux-5.11.tar.xz
+         https://github.com/HougeLangley/customkernel/releases/download/Kernel-v5.11.x/0001-patch-5.11.7-xanmod1.xz
+         ${GENPATCHES_URI}
+"
 
+src_unpack() {
 UNIPATCH_LIST_DEFAULT=""
 UNIPATCH_LIST="${DISTDIR}/0001-patch-5.11.7-xanmod1.xz"
+kernel-2-src-prepare-overlay_src_unpack
+}
 
 KEYWORDS="~amd64"
 
@@ -30,4 +37,10 @@ src_prepare() {
 
 	kernel-2-src-prepare-overlay_src_prepare
 
+}
+
+pkg_postinst() {
+	elog "MICROCODES"
+	elog "Use xanmod-sources with microcodes"
+	elog "Read https://wiki.gentoo.org/wiki/Intel_microcode"
 }
