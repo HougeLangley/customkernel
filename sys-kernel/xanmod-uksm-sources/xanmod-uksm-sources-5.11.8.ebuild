@@ -16,13 +16,13 @@ HOMEPAGE="https://xanmod.org/"
 LICENSE+=" CDDL"
 SRC_URI="
          ${KERNEL_BASE_URI}/linux-5.11.tar.xz
-         https://github.com/HougeLangley/customkernel/releases/download/Kernel-v5.11.x/0001-patch-5.11.7-xanmod1.xz
+         https://github.com/HougeLangley/customkernel/releases/download/Kernel-v5.11.x/0001-patch-5.11.8-xanmod1.xz
          ${GENPATCHES_URI}
 "
 
 src_unpack() {
     UNIPATCH_LIST_DEFAULT=""
-    UNIPATCH_LIST="${DISTDIR}/0001-patch-5.11.7-xanmod1.xz"
+    UNIPATCH_LIST="${DISTDIR}/0001-patch-5.11.8-xanmod1.xz"
     kernel-2-src-prepare-overlay_src_unpack
 }
 
@@ -33,7 +33,7 @@ src_prepare() {
     eapply "${FILESDIR}/sphinx-workaround.patch"
     eapply "${FILESDIR}/UKSM-reversion01.patch"
     eapply "${FILESDIR}/cjktty.patch"
-    eapply "${FILESDIR}/0011-06-Makefile.patch"
+    eapply "${FILESDIR}/0011-08-Makefile.patch"
 
 	kernel-2-src-prepare-overlay_src_prepare
 

@@ -6,23 +6,23 @@ K_WANT_GENPATCHES="base extras"
 K_GENPATCHES_VER="1"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
+CACULE_VERSION="5.11-rdb"
 ETYPE="sources"
 
 inherit kernel-2-src-prepare-overlay
 detect_version
 
-DESCRIPTION="Xanmod and UKSM sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
-HOMEPAGE="https://xanmod.org/"
+DESCRIPTION="Xanmod and CacULE sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
+HOMEPAGE="https://github.com/hamadmarri/cacule-cpu-scheduler"
 LICENSE+=" CDDL"
-SRC_URI="
-         ${KERNEL_BASE_URI}/linux-5.11.tar.xz
-         https://github.com/HougeLangley/customkernel/releases/download/Kernel-v5.11.x/0001-patch-5.11.7-xanmod1.xz
+SRC_URI="${KERNEL_BASE_URI}/linux-5.11.tar.xz
+         https://github.com/HougeLangley/customkernel/releases/download/Kernel-v5.11.x/0001-patch-5.11.8-xanmod1-cacule.xz
          ${GENPATCHES_URI}
 "
 
 src_unpack() {
     UNIPATCH_LIST_DEFAULT=""
-    UNIPATCH_LIST="${DISTDIR}/0001-patch-5.11.7-xanmod1.xz"
+    UNIPATCH_LIST="${DISTDIR}/0001-patch-5.11.8-xanmod1-cacule.xz"
     kernel-2-src-prepare-overlay_src_unpack
 }
 
@@ -32,9 +32,7 @@ src_prepare() {
 
     eapply "${FILESDIR}/sphinx-workaround.patch"
     eapply "${FILESDIR}/UKSM-reversion01.patch"
-    eapply "${FILESDIR}/cjktty.patch"
-    eapply "${FILESDIR}/0011-06-Makefile.patch"
-
+    
 	kernel-2-src-prepare-overlay_src_prepare
 
 }
