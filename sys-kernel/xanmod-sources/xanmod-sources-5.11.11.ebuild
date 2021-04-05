@@ -8,6 +8,7 @@ K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 ETYPE="sources"
 IUSE="uksm cjktty"
+DEPEND="app-arch/cpio"
 
 inherit kernel-2-src-prepare-overlay
 detect_version
