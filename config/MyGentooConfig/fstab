@@ -32,4 +32,4 @@ UUID=d0fb4cfc-1750-414e-9659-62b3f71dd06c     /         btrfs           subvol=0
 UUID=d3244d73-8b26-4245-8151-33e9f4b43f56     /home     btrfs           defaults,noatime,space_cache,space_cache=v2,autodefrag,discard=async,ssd,compress=zstd:1 0 2
 tmpfs                                         /tmp      tmpfs           size=40G,noatime 0 0
 tmpfs                                         /var/tmp  tmpfs           size=20G,noatime 0 0     
-#UUID=ebc2555f-c840-454b-83f4-73e0d30fbb7e     /mnt/Backup btrfs nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=Backup,noatime,space_cache,space_cache=v2,autodefrag,discard=async,ssd,compress=zstd:1 0 0
+#UUID=ebc2555f-c840-454b-83f4-73e0d30fbb7e    /mnt/Backup btrfs nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=Backup,noatime,space_cache,space_cache=v2,autodefrag,discard=async,ssd,compress=zstd:1 0 0
