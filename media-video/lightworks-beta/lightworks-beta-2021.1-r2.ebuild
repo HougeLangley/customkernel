@@ -83,7 +83,7 @@ src_install() {
 	domenu usr/share/applications/lightworks.desktop
 	doicon usr/share/lightworks/Icons/App.png
 	
-	insinto /usr/lib64/lightworks
+	insinto /usr/lib/lightworks
 	doins -r usr/lib/lightworks/* || die "doins lib failed"
 
 	fperms a+rw "usr/share/lightworks/Preferences"
