@@ -86,6 +86,9 @@ src_install() {
 	insinto /usr/lib/lightworks
 	doins -r usr/lib/lightworks/* || die "doins lib failed"
 
+	exeinto /usr/lib/lightworks
+	doexe usr/lib/lightworks/ntcardvt || die "doins lib-exe failed"
+
 	fperms a+rw "usr/share/lightworks/Preferences"
 	fperms a+rw "usr/share/lightworks/Audio Mixes"
 
