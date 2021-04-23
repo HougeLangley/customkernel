@@ -85,10 +85,10 @@ src_install() {
 	doicon usr/share/lightworks/Icons/App.png
 	
 	insinto /usr/lib64/${PN}
-	doins -r usr/lib/${PN}/* || die "doins lib failed"
+	doins -r usr/lib/lightworks/* || die "doins lib failed"
 
 	exeinto /usr/lib64/${PN}
-	doexe usr/lib/${PN}/ntcardvt || die "doins lib-exe failed"
+	doexe usr/lib/lightworks/ntcardvt || die "doins lib-exe failed"
 
 	fperms a+rw "usr/share/lightworks/Preferences"
 	fperms a+rw "usr/share/lightworks/Audio Mixes"
