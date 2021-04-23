@@ -57,6 +57,7 @@ RDEPEND="
 	x11-libs/libXdmcp
 	x11-libs/libdrm
 	app-accessibility/at-spi2-core
+	!media-video/lightworks-beta
 "
 
 DEPEND="${RDEPEND}

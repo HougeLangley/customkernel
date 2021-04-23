@@ -1,14 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 EAPI="6"
 
-inherit eutils rpm
+inherit eutils
 
 DESCRIPTION="Lightworks Beta Version, Just For Testing"
 HOMEPAGE="http://www.lwks.com/"
-SRC_URI="https://github.com/HougeLangley/customkernel/releases/download/LWS/Lightworks-2021.1-Beta-126396.rpm"
+SRC_URI="https://github.com/HougeLangley/lwks-beta/releases/download/lwks-reversion/Lightworks-2021.2-Beta-128258.deb"
 
 LICENSE="EditShare"
 SLOT="0"
@@ -58,16 +58,18 @@ RDEPEND="
 	x11-libs/libXdmcp
 	x11-libs/libdrm
 	app-accessibility/at-spi2-core
+	!media-video/lightworks
 "
 
 DEPEND="${RDEPEND}
-	app-arch/rpm2targz
+	!app-arch/deb2targz
 	app-arch/unzip"
 
 S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
+	unpack ./data.tar.xz
 }
 
 src_prepare() {
@@ -86,7 +88,6 @@ src_install() {
 	doins -r usr/lib/${PN}/* || die "doins lib failed"
 
 	exeinto /usr/lib64/${PN}
-	doexe usr/lib/${PN}/spawn || die "doins lib-exe failed"
 	doexe usr/lib/${PN}/ntcardvt || die "doins lib-exe failed"
 
 	fperms a+rw "usr/share/lightworks/Preferences"
@@ -101,5 +102,3 @@ src_install() {
 
 	dodoc usr/share/doc/${PN}/*
 }
-
-
