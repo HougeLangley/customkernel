@@ -100,5 +100,5 @@ src_install() {
 	doins -r usr/share/fonts/* || die "doins fonts failed"
 	mkfontdir "${D}/usr/share/fonts/truetype"
 
-	dodoc usr/share/doc/${PN}/*
+	dodoc usr/share/doc/lightworks/*
 }
