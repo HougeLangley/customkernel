@@ -74,7 +74,7 @@ src_unpack() {
 
 src_prepare() {
     eapply_user
-    sed -i -e "s|^GDK.*|GDK_BACKEND=x11 /usr/lib64/lightworks-beta/ntcardvt|" usr/bin/lightworks || die
+    sed -i -e "s|^GDK.*|GDK_BACKEND=x11 /usr/lib64/lightworks/ntcardvt|" usr/bin/lightworks || die
 }
 
 
@@ -84,16 +84,16 @@ src_install() {
 	domenu usr/share/applications/lightworks.desktop
 	doicon usr/share/lightworks/Icons/App.png
 	
-	insinto /usr/lib64/${PN}
+	insinto /usr/lib64/lightworks
 	doins -r usr/lib/lightworks/* || die "doins lib failed"
 
-	exeinto /usr/lib64/${PN}
+	exeinto /usr/lib64/lightworks
 	doexe usr/lib/lightworks/ntcardvt || die "doins lib-exe failed"
 
 	fperms a+rw "usr/share/lightworks/Preferences"
 	fperms a+rw "usr/share/lightworks/Audio Mixes"
 
-	insinto /usr/share/${PN}
+	insinto /usr/share/lightworks
 	doins -r usr/share/lightworks/* || die "doins share failed"
 
 	insinto /usr/share/fonts
