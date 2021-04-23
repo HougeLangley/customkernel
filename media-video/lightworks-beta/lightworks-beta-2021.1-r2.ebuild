@@ -94,7 +94,7 @@ src_install() {
 	fperms a+rw "usr/share/lightworks/Audio Mixes"
 
 	insinto /usr/share/${PN}
-	doins -r usr/share/*/* || die "doins share failed"
+	doins -r usr/share/lightworks/* || die "doins share failed"
 
 	insinto /usr/share/fonts
 	doins -r usr/share/fonts/* || die "doins fonts failed"
