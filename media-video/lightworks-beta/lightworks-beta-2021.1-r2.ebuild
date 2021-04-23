@@ -74,7 +74,7 @@ src_unpack() {
 
 src_prepare() {
     eapply_user
-    sed -i -e "s|^GDK.*|GDK_BACKEND=x11 /usr/lib64/lightworks/ntcardvt|" usr/bin/lightworks || die
+    sed -i -e "s|^GDK.*|GDK_BACKEND=x11 /usr/lib64/lightworks-beta/ntcardvt|" usr/bin/lightworks || die
 }
 
 
