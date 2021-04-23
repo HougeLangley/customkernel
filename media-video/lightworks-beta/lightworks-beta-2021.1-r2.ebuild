@@ -74,6 +74,7 @@ src_unpack() {
 
 src_prepare() {
     eapply_user
+    sed -i -e "/usr/lib64/lightworks/ntcardvt|" usr/bin/lightworks || die
 }
 
 
