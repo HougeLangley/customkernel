@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="Lightworks Beta Version, Just For Testing"
 HOMEPAGE="http://www.lwks.com/"
-SRC_URI="https://github.com/HougeLangley/lwks-beta/releases/download/lwks-reversion/Lightworks-2021.2-Beta-128258.deb"
+SRC_URI="https://github.com/HougeLangley/lwks-beta/releases/download/lwks-reversion/lightworks-beta-2021.1-r2.deb"
 
 LICENSE="EditShare"
 SLOT="0"
