@@ -26,6 +26,7 @@ RDEPEND="
 	sys-apps/dbus
 	sys-libs/libcxx
 	sys-libs/libcxxabi
+	sys-devel/gdb
 	virtual/udev
 	x11-libs/pango
 	x11-libs/gdk-pixbuf
