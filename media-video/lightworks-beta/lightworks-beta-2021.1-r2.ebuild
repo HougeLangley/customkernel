@@ -26,6 +26,7 @@ RDEPEND="
 	sys-apps/dbus
 	sys-libs/libcxx
 	sys-libs/libcxxabi
+	sys-devel/gdb
 	virtual/udev
 	x11-libs/pango
 	x11-libs/gdk-pixbuf
@@ -41,7 +42,8 @@ RDEPEND="
 	media-libs/fontconfig
 	media-libs/glu
 	media-libs/mesa
-	media-libs/portaudio[jack] 
+	media-libs/portaudio[jack,oss,alsa]
+	media-libs/alsa-lib
 	>=media-gfx/nvidia-cg-toolkit-3.1.0013-r2
 	x11-libs/libxcb
 	x11-libs/libXinerama
