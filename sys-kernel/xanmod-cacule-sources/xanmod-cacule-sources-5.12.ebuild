@@ -29,7 +29,7 @@ SRC_URI="
 
 src_unpack() {
     UNIPATCH_LIST_DEFAULT=""
-    UNIPATCH_LIST="${DISTDIR}/0001-patch-5.12.0-xanmod1-cacule"
+    UNIPATCH_LIST="${DISTDIR}/0001-patch-5.12.0-xanmod1-cacule.xz"
     kernel-2-src-prepare-overlay_src_unpack
 }
 
