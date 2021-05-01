@@ -8,7 +8,7 @@ K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 PROJECTC_VERSION="r0"
 ETYPE="sources"
-IUSE="uksm cjktty"
+IUSE="uksm cjktty pds bmq muqss"
 DEPEND="app-arch/cpio
         dev-util/dwarves
         dev-libs/libbpf"
@@ -39,8 +39,6 @@ src_prepare() {
     eapply "${FILESDIR}/0005-acs.patch"
     eapply "${FILESDIR}/0006-fsync.patch"
     eapply "${FILESDIR}/0007-futex2.patch"
-    eapply "${FILESDIR}/0009-ondemand-bmq.patch"
-    eapply "${FILESDIR}/0008-bmq.patch"
     eapply "${FILESDIR}/0009-prjc_v5.12-r0.patch"
     eapply "${FILESDIR}/0010-misc.patch"
     eapply "${FILESDIR}/0001-soft-dirty-flag-part-one.patch"
@@ -54,9 +52,24 @@ src_prepare() {
     if use cjktty ; then
     eapply "${FILESDIR}/v1-cjktty.patch" || die
     fi
-    
-	kernel-2-src-prepare-overlay_src_prepare
 
+    if use bmq ; then
+    eapply "${FILESDIR}/0009-ondemand-bmq.patch" || die
+    eapply "${FILESDIR}/0008-bmq.patch" || die
+    fi
+
+    if use pds ; then
+    eapply "${FILESDIR}/0008-pds.patch" || die
+    fi
+
+    if use muqss ; then
+    eapply "${FILESDIR}/0004-ondemand-muqss.patch" || die
+    eapply "${FILESDIR}/0004-muqss.patch" || die
+    eapply "${FILESDIR}/0004-ck1.patch" || die
+    fi
+
+	kernel-2-src-prepare-overlay_src_prepare
+    
 }
 
 pkg_postinst() {
