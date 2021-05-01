@@ -38,7 +38,6 @@ src_prepare() {
     default
     eapply "${FILESDIR}/0001-add.patch"
     eapply "${FILESDIR}/0001-soft-dirty-flag-part-one.patch"
-    eapply "${FILESDIR}/0002-clear-patches"
     eapply "${FILESDIR}/0002-soft-dirty-flag-part-two.patch"
     eapply "${FILESDIR}/0003-base.patch"
     eapply "${FILESDIR}/0004-pds.patch"
