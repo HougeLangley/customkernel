@@ -40,6 +40,7 @@ src_prepare() {
     eapply "${FILESDIR}/0001-soft-dirty-flag-part-one.patch"
     eapply "${FILESDIR}/0002-soft-dirty-flag-part-two.patch"
     eapply "${FILESDIR}/0003-base.patch"
+    eapply "${FILESDIR}/0010-misc.patch"
     eapply "${FILESDIR}/0004-pds.patch"
     eapply "${FILESDIR}/0005-acs.patch"
     eapply "${FILESDIR}/0006-fsync.patch"
@@ -48,7 +49,6 @@ src_prepare() {
     eapply "${FILESDIR}/0009-ondemand-bmq.patch"
     eapply "${FILESDIR}/0009-cpu.patch"
     eapply "${FILESDIR}/0010-bbr2.patch"
-    eapply "${FILESDIR}/0010-misc.patch"
 
     if use uksm ; then
     eapply "${FILESDIR}/v1-uksm.patch" || die
