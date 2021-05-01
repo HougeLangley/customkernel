@@ -45,31 +45,23 @@ src_prepare() {
     eapply "${FILESDIR}/0002-soft-dirty-flag-part-two.patch"
     eapply "${FILESDIR}/0010-bbr2.patch"
 
-    if use uksm ; then
-    eapply "${FILESDIR}/v1-uksm.patch" || die
-    fi
+    use uksm && eapply "${FILESDIR}/v1-uksm.patch" || die
 
-    if use cjktty ; then
-    eapply "${FILESDIR}/v1-cjktty.patch" || die
-    fi
+    use cjktty && eapply "${FILESDIR}/v1-cjktty.patch" || die
 
-    if use bmq ; then
+    use bmq &&
     eapply "${FILESDIR}/0009-ondemand-bmq.patch" || die
     eapply "${FILESDIR}/0008-bmq.patch" || die
-    fi
 
-    if use pds ; then
-    eapply "${FILESDIR}/0008-pds.patch" || die
-    fi
+    use pds && eapply "${FILESDIR}/0008-pds.patch" || die
 
-    if use muqss ; then
+    use muqss &&
     eapply "${FILESDIR}/0004-ondemand-muqss.patch" || die
     eapply "${FILESDIR}/0004-muqss.patch" || die
     eapply "${FILESDIR}/0004-ck1.patch" || die
-    fi
 
 	kernel-2-src-prepare-overlay_src_prepare
-    
+
 }
 
 pkg_postinst() {
