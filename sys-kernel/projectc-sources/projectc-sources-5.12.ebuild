@@ -36,7 +36,6 @@ src_prepare() {
     eapply "${FILESDIR}/0001-add.patch"
     eapply "${FILESDIR}/0002-clear.patch"
     eapply "${FILESDIR}/0003-base.patch"
-    eapply "${FILESDIR}/0004-pds.patch"
     eapply "${FILESDIR}/0005-acs.patch"
     eapply "${FILESDIR}/0006-fsync.patch"
     eapply "${FILESDIR}/0007-futex2.patch"
