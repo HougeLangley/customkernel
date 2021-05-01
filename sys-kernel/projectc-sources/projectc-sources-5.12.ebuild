@@ -20,14 +20,11 @@ DESCRIPTION="Full Project-C CPU Scheduler sources including the Gentoo patchset 
 HOMEPAGE="https://cchalpha.blogspot.com/"
 LICENSE+=" CDDL"
 SRC_URI="${KERNEL_BASE_URI}/linux-5.12.tar.xz
-         https://github.com/HougeLangley/customkernel/releases/download/v5.12-patch/0002-prjc_v5.12-r0.xz
          ${GENPATCHES_URI}
 "
 
 src_unpack() {
     UNIPATCH_LIST_DEFAULT=""
-    UNIPATCH_LIST="${DISTDIR}/0002-prjc_v5.12-r0.xz
-"
     kernel-2-src-prepare-overlay_src_unpack
 }
 
@@ -37,17 +34,18 @@ src_prepare() {
 
     default
     eapply "${FILESDIR}/0001-add.patch"
-    eapply "${FILESDIR}/0001-soft-dirty-flag-part-one.patch"
-    eapply "${FILESDIR}/0002-soft-dirty-flag-part-two.patch"
+    eapply "${FILESDIR}/0002-clear.patch"
     eapply "${FILESDIR}/0003-base.patch"
-    eapply "${FILESDIR}/0010-misc.patch"
     eapply "${FILESDIR}/0004-pds.patch"
     eapply "${FILESDIR}/0005-acs.patch"
     eapply "${FILESDIR}/0006-fsync.patch"
     eapply "${FILESDIR}/0007-futex2.patch"
-    eapply "${FILESDIR}/0008-bmq.patch"
     eapply "${FILESDIR}/0009-ondemand-bmq.patch"
-    eapply "${FILESDIR}/0009-cpu.patch"
+    eapply "${FILESDIR}/0008-bmq.patch"
+    eapply "${FILESDIR}/0009-prjc_v5.12-r0.patch"
+    eapply "${FILESDIR}/0010-misc.patch"
+    eapply "${FILESDIR}/0001-soft-dirty-flag-part-one.patch"
+    eapply "${FILESDIR}/0002-soft-dirty-flag-part-two.patch"
     eapply "${FILESDIR}/0010-bbr2.patch"
 
     if use uksm ; then
