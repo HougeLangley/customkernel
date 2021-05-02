@@ -65,10 +65,7 @@ src_prepare() {
     fi
 
     if use muqss ; then
-    eapply "${FILESDIR}/0003-cfs.patch"
-    eapply "${FILESDIR}/0004-ondemand-muqss.patch" || die
     eapply "${FILESDIR}/0004-muqss.patch" || die
-    eapply "${FILESDIR}/0004-ck1.patch" || die
     fi
 
 	kernel-2-src-prepare-overlay_src_prepare
