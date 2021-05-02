@@ -17,8 +17,8 @@ DEPEND="app-arch/cpio
 inherit kernel-2-src-prepare-overlay
 detect_version
 
-DESCRIPTION="Full Project-C CPU Scheduler sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
-HOMEPAGE="https://cchalpha.blogspot.com/"
+DESCRIPTION="Full Project-C CPU Scheduler And MuQSS CPU Scheduler sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
+HOMEPAGE="https://github.com/Frogging-Family/linux-tkg"
 LICENSE+=" CDDL"
 SRC_URI="${KERNEL_BASE_URI}/linux-5.12.tar.xz
          ${GENPATCHES_URI}
@@ -54,13 +54,13 @@ src_prepare() {
     fi
 
     if use bmq ; then
-    eapply "${FILESDIR}/0009-prjc_v5.12-r0.patch"
+    eapply "${FILESDIR}/0009-prjc_v5.12-r0.patch" || die
     eapply "${FILESDIR}/0009-ondemand-bmq.patch" || die
     eapply "${FILESDIR}/0008-bmq.patch" || die
     fi
 
     if use pds ; then
-    eapply "${FILESDIR}/0009-prjc_v5.12-r0.patch"
+    eapply "${FILESDIR}/0009-prjc_v5.12-r0.patch" || die
     eapply "${FILESDIR}/0008-pds.patch" || die
     fi
 
