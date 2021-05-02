@@ -40,7 +40,6 @@ src_prepare() {
     eapply "${FILESDIR}/0005-acs.patch"
     eapply "${FILESDIR}/0006-fsync.patch"
     eapply "${FILESDIR}/0007-futex2.patch"
-    eapply "${FILESDIR}/0009-prjc_v5.12-r0.patch"
     eapply "${FILESDIR}/0010-misc.patch"
     eapply "${FILESDIR}/0001-soft-dirty-flag-part-one.patch"
     eapply "${FILESDIR}/0002-soft-dirty-flag-part-two.patch"
@@ -55,11 +54,13 @@ src_prepare() {
     fi
 
     if use bmq ; then
+    eapply "${FILESDIR}/0009-prjc_v5.12-r0.patch"
     eapply "${FILESDIR}/0009-ondemand-bmq.patch" || die
     eapply "${FILESDIR}/0008-bmq.patch" || die
     fi
 
     if use pds ; then
+    eapply "${FILESDIR}/0009-prjc_v5.12-r0.patch"
     eapply "${FILESDIR}/0008-pds.patch" || die
     fi
 
