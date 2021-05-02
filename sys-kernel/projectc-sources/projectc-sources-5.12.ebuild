@@ -9,7 +9,7 @@ K_NOSETEXTRAVERSION="1"
 PROJECTC_VERSION="r0"
 ETYPE="sources"
 IUSE="uksm cjktty pds bmq muqss"
-#REQUIRED_USE="^^ ( pds bmq muqss )"
+REQUIRED_USE="^^ ( pds bmq muqss )"
 DEPEND="app-arch/cpio
         dev-util/dwarves
         dev-libs/libbpf"
@@ -50,7 +50,7 @@ src_prepare() {
     eapply "${FILESDIR}/v1-uksm.patch" || die
     fi
 
-    if use cjktty ;
+    if use cjktty ; then
     eapply "${FILESDIR}/v1-cjktty.patch" || die
     fi
 
