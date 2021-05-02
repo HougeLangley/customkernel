@@ -37,7 +37,6 @@ src_prepare() {
     eapply "${FILESDIR}/0001-add.patch"
     eapply "${FILESDIR}/0002-clear.patch"
     eapply "${FILESDIR}/0003-base.patch"
-    eapply "${FILESDIR}/0003-cfs.patch"
     eapply "${FILESDIR}/0005-acs.patch"
     eapply "${FILESDIR}/0006-fsync.patch"
     eapply "${FILESDIR}/0007-futex2.patch"
@@ -66,6 +65,7 @@ src_prepare() {
     fi
 
     if use muqss ; then
+    eapply "${FILESDIR}/0003-cfs.patch"
     eapply "${FILESDIR}/0004-ondemand-muqss.patch" || die
     eapply "${FILESDIR}/0004-muqss.patch" || die
     eapply "${FILESDIR}/0004-ck1.patch" || die
