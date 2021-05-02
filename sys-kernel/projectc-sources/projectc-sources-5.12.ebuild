@@ -35,6 +35,7 @@ src_prepare() {
 
     default
     eapply "${FILESDIR}/0001-add.patch"
+    eapply "${FILESDIR}/0001-cpu.patch"
     eapply "${FILESDIR}/0002-clear.patch"
     eapply "${FILESDIR}/0003-base.patch"
     eapply "${FILESDIR}/0005-acs.patch"
