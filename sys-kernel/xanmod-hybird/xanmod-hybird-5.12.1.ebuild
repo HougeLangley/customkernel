@@ -45,11 +45,11 @@ src_prepare() {
     fi
 
     if use xanmod ; then
-    eapply "${FILESDIR}/patch-5.12.1-xanmod2.xz" || die "Please Let Me Know"
+    eapply "${FILESDIR}/patch-5.12.1-xanmod2" || die "Please Let Me Know"
     fi
 
     if use cacule ; then
-    eapply "${FILESDIR}/patch-5.12.1-xanmod2-cacule.xz" || die "Please Let Me Know"
+    eapply "${FILESDIR}/patch-5.12.1-xanmod2-cacule" || die "Please Let Me Know"
     fi
 
     kernel-2-src-prepare-overlay_src_prepare
