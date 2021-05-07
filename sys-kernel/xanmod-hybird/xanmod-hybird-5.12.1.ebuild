@@ -13,9 +13,7 @@ DEPEND="app-arch/cpio
         dev-util/dwarves
         dev-libs/libbpf
 "
-RDEPEND="!sys-kernel/xanmod-sources
-         !sys-kernel/xanmod-cacule-sources
-"
+RDEPEND="!sys-kernel/xanmod-sources"
 
 inherit kernel-2-src-prepare-overlay
 detect_version
