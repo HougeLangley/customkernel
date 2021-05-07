@@ -37,19 +37,19 @@ KEYWORDS="~amd64"
 src_prepare() {
 
     if use uksm ; then
-    eapply "${FILESDIR}/v1-uksm.patch" || die "Please Let Me Know"
+    eapply "${FILESDIR}/v1-uksm.patch" || die
     fi
 
     if use cjktty ; then
-    eapply "${FILESDIR}/v1-cjktty.patch" || die "Please Let Me Know"
+    eapply "${FILESDIR}/v1-cjktty.patch" || die
     fi
 
     if use xanmod ; then
-    eapply "${FILESDIR}/patch-5.12.1-xanmod2" || die "Please Let Me Know"
+    eapply "${FILESDIR}/patch-5.12.1-xanmod2" || die
     fi
 
     if use cacule ; then
-    eapply "${FILESDIR}/patch-5.12.1-xanmod2-cacule" || die "Please Let Me Know"
+    eapply "${FILESDIR}/patch-5.12.1-xanmod2-cacule" || die
     fi
 
     kernel-2-src-prepare-overlay_src_prepare
