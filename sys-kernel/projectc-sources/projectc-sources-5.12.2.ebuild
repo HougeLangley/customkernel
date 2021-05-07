@@ -21,8 +21,8 @@ DESCRIPTION="Full Project-C CPU Scheduler And MuQSS CPU Scheduler sources includ
 HOMEPAGE="https://github.com/Frogging-Family/linux-tkg"
 LICENSE+=" CDDL"
 SRC_URI="${KERNEL_BASE_URI}/linux-5.12.tar.xz
-         https://cdn.kernel.org/pub/linux/kernel/v5.x/patch-5.12.2.xz
-         ${GENPATCHES_URI}
+        https://cdn.kernel.org/pub/linux/kernel/v5.x/patch-5.12.2.xz
+        ${GENPATCHES_URI}
 "
 
 src_unpack() {
@@ -71,11 +71,11 @@ src_prepare() {
     eapply "${FILESDIR}/0004-muqss.patch" || die
     fi
 
-	kernel-2-src-prepare-overlay_src_prepare
+    kernel-2-src-prepare-overlay_src_prepare
     
 }
 
 pkg_postinst() {
-	elog "MICROCODES"
-	elog "Read https://wiki.gentoo.org/wiki/Intel_microcode"
+    elog "MICROCODES"
+    elog "Read https://wiki.gentoo.org/wiki/Intel_microcode"
 }
