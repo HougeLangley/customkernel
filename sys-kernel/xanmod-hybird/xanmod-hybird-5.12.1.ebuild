@@ -11,7 +11,11 @@ IUSE="uksm cjktty xanmod cacule"
 REQUIRED_USE="^^ ( xanmod cacule )"
 DEPEND="app-arch/cpio
         dev-util/dwarves
-        dev-libs/libbpf"
+        dev-libs/libbpf
+"
+RDEPEND="!sys-kernel/xanmod-sources
+         !sys-kernel/xanmod-cacule-sources
+"
 
 inherit kernel-2-src-prepare-overlay
 detect_version
