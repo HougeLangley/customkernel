@@ -36,39 +36,39 @@ KEYWORDS="~amd64"
 src_prepare() {
 
     default
-    eapply "${FILESDIR}/0001-add.patch"
-    eapply "${FILESDIR}/0001-cpu.patch"
-    eapply "${FILESDIR}/0002-clear.patch"
-    eapply "${FILESDIR}/0003-base.patch"
-    eapply "${FILESDIR}/0005-acs.patch"
-    eapply "${FILESDIR}/0006-fsync.patch"
-    eapply "${FILESDIR}/0007-futex2.patch"
-    eapply "${FILESDIR}/0010-misc.patch"
-    eapply "${FILESDIR}/0001-soft-dirty-flag-part-one.patch"
-    eapply "${FILESDIR}/0002-soft-dirty-flag-part-two.patch"
-    eapply "${FILESDIR}/0010-bbr2.patch"
+    eapply  "${FILESDIR}/0001-add.patch"
+    eapply  "${FILESDIR}/0001-cpu.patch"
+    eapply  "${FILESDIR}/0002-clear.patch"
+    eapply  "${FILESDIR}/0003-base.patch"
+    eapply  "${FILESDIR}/0005-acs.patch"
+    eapply  "${FILESDIR}/0006-fsync.patch"
+    eapply  "${FILESDIR}/0007-futex2.patch"
+    eapply  "${FILESDIR}/0010-misc.patch"
+    eapply  "${FILESDIR}/0001-soft-dirty-flag-part-one.patch"
+    eapply  "${FILESDIR}/0002-soft-dirty-flag-part-two.patch"
+    eapply  "${FILESDIR}/0010-bbr2.patch"
 
-    if use uksm ; then
-    eapply "${FILESDIR}/v1-uksm.patch" || die
+    if  use uksm    ;   then
+    eapply  "${FILESDIR}/v1-uksm.patch" ||  die
     fi
 
-    if use cjktty ; then
-    eapply "${FILESDIR}/v1-cjktty.patch" || die
+    if  use cjktty  ;   then
+    eapply  "${FILESDIR}/v1-cjktty.patch"   ||  die
     fi
 
-    if use bmq ; then
-    eapply "${FILESDIR}/0009-prjc_v5.12-r1.patch" || die
-    eapply "${FILESDIR}/0009-ondemand-bmq.patch" || die
-    eapply "${FILESDIR}/0008-bmq.patch" || die
+    if  use bmq ;   then
+    eapply  "${FILESDIR}/0009-prjc_v5.12-r1.patch"  ||  die
+    eapply  "${FILESDIR}/0009-ondemand-bmq.patch"   ||  die
+    eapply  "${FILESDIR}/0008-bmq.patch"    ||  die
     fi
 
-    if use pds ; then
-    eapply "${FILESDIR}/0009-prjc_v5.12-r1.patch" || die
-    eapply "${FILESDIR}/0008-pds.patch" || die
+    if  use pds ;   then
+    eapply  "${FILESDIR}/0009-prjc_v5.12-r1.patch"  ||  die
+    eapply  "${FILESDIR}/0008-pds.patch"    ||  die
     fi
 
-    if use muqss ; then
-    eapply "${FILESDIR}/0004-muqss.patch" || die
+    if  use muqss   ;   then
+    eapply  "${FILESDIR}/0004-muqss.patch"  ||  die
     fi
 
     kernel-2-src-prepare-overlay_src_prepare
