@@ -7,7 +7,7 @@ K_GENPATCHES_VER="1"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 ETYPE="sources"
-IUSE="uksm cjktty xanmod cacule"
+IUSE="uksm cjktty +xanmod cacule"
 REQUIRED_USE="^^ ( xanmod cacule )"
 DEPEND="app-arch/cpio
         dev-util/dwarves
