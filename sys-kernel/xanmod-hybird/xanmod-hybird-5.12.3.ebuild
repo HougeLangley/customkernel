@@ -47,7 +47,7 @@ src_prepare() {
     fi
 
     if  use cacule  ;   then
-    eapply  "${FILESDIR}/patch-5.12.2-xanmod1-cacule"   ||  die
+    eapply  "${FILESDIR}/patch-5.12.3-xanmod1-cacule"   ||  die
     fi
 
     kernel-2-src-prepare-overlay_src_prepare
