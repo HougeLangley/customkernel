@@ -43,7 +43,7 @@ src_prepare() {
     fi
 
     if  use xanmod  ;   then
-    eapply  "${FILESDIR}/patch-5.12.3-xanmod1"  ||  die
+    eapply  "${FILESDIR}/patch-5.12.3-xanmod2"  ||  die
     fi
 
     if  use cacule  ;   then
