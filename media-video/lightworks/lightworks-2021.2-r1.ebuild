@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="Lightworks is the fastest, most accessible and focused NLE in the industry"
 HOMEPAGE="http://www.lwks.com/"
-SRC_URI="https://github.com/HougeLangley/lwks-beta/releases/download/lwks-reversion/lightworks_2021.2_r128456.deb"
+SRC_URI="https://github.com/HougeLangley/lwks-beta/releases/download/lwks-reversion/lightworks_2021.2_r128258.deb"
 
 LICENSE="EditShare"
 SLOT="0"
