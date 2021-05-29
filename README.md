@@ -1,10 +1,10 @@
 # customkernel
 
-**在大家安装 Project C 内核之前，相关依赖我加入了，大家可以安心安装**
+**如果你将我的 overlay 加入到系统中，不用担心，可以安心使用**
 
 **大家注意源中提供的 Xanmod 默认 config 文件的，Project C 的配置在相应文件夹中可以找到。一方面有助于使用者更好的编译，另一方面保留了这个内核配置文件中的优化部分，而我这个 overlay 中 config 文件夹中的 xanmod cacule config 就删掉了，另外的两个保留，保留的是我自己使用的，各位根据具体情况酌情修改，5.9这次更新我发现我的 .config 配置文件不够全面，于是更换成 linux-tkg 的 .config 文件。最后，这个四个内核都可以安装 zfs-kmod，望周知**
 
-## 三个魔改 Linux 内核 ebuild
+## 两个魔改 Linux 内核 ebuild ，通过 USE 还可以添砖加瓦
 
 ### Xanmod 内核
 
