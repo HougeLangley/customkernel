@@ -8,12 +8,12 @@
 
 ## 两个魔改 Linux 内核 ebuild ，通过 USE 还可以添砖加瓦
 
-### Xanmod 内核
+### Xanmod-Hybrid 内核
 
-[Xanmod](https://xanmod.org/) 是 Linux 第三方定制内核中非常著名的。原始 Xanmod 内核并没有对 CPU 调度器做非常特殊定制的情况下，能够在 [Phoronix Benchmark](https://www.phoronix.com/scan.php?page=article&item=xanmod-2020-kernel&num=3) 中击败众多对手，比方说 [Liquorix](https://liquorix.net/)。并且 Xanmod 的稳定版本在其官方主页支持基于 Debian 的所有发行版，当然，还有 [Archlinux](https://aur.archlinux.org/packages/linux-xanmod/) 和 [Gentoo](https://gitlab.com/src_prepare/src_prepare-overlay/-/tree/master/sys-kernel/xanmod-sources) 。那么既然已经有 Gentoo 的 overlay 了，我为什么还要做一个 overlay 呢？
+[Xanmod-Hybrid](https://xanmod.org/) 是 Linux 第三方定制内核中非常著名的。因为我将原始版本 xanmod 和 xanmod-cacule 通过 USE 进行了融合，另外为了区别 xanmod 原始贡献者的版本，取了这个名字。原始 Xanmod 内核并没有对 CPU 调度器做非常特殊定制的情况下，能够在 [Phoronix Benchmark](https://www.phoronix.com/scan.php?page=article&item=xanmod-2020-kernel&num=3) 中击败众多对手，比方说 [Liquorix](https://liquorix.net/)。并且 Xanmod 的稳定版本在其官方主页支持基于 Debian 的所有发行版，当然，还有 [Archlinux](https://aur.archlinux.org/packages/linux-xanmod/) 和 [Gentoo](https://gitlab.com/src_prepare/src_prepare-overlay/-/tree/master/sys-kernel/xanmod-sources) 。那么既然已经有 Gentoo 的 overlay 了，我为什么还要做一个 overlay 呢？
 
 1. [src_prepare overlay](https://gitlab.com/src_prepare/src_prepare-overlay) 只提供稳定版本的 Xanmod 内核；
-2. 跟随上游 [Xanmod Cacule](https://github.com/xanmod/linux/tree/5.10-cacule) 这个分支的主线，目前大家看到的是5.10，后续会维护最新版本的内核；
+2. 跟随上游 [Xanmod Cacule](https://github.com/xanmod/linux/tree/5.10-cacule) 这个分支的主线，目前大家可以通过打开 cacule 这个 USE 来实现使用；
 3. 默认提供的 Xanmod 内核给用户可定制空间较少，我将uksm和cjktty加入到内核中，以 USE 的形式提供，大家需要只需要打开相关 USE 就能够方便使用了；
 4. config 在内核源码安装后就有了，是 Xanmod 默认提供的版本，大家直接 make nconfig 就能够狗按照自己的喜好定制了，方便；
 5. UKSM 补丁，来源是 [Piotr Górski](https://gitlab.com/sirlucjan/kernel-patches/-/tree/master) 提供的各式各样第三方补丁，并且根据主线会实时更新。
