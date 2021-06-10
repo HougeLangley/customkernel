@@ -1,0 +1,36 @@
+COMMON_FLAGS="-march=znver3 -O3 -pipe"
+CPU_FLAGS_X86="aes avx avx2 f16c fma3 mmx mmxext pclmul popcnt rdrand sha sse sse2 sse3 sse4_1 sse4_2 sse4a ssse3"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
+
+# NOTE: This stage was built with the bindist Use flag enabled
+PORTDIR="/var/db/repos/gentoo"
+DISTDIR="/var/cache/distfiles"
+PKGDIR="/var/cache/binpkgs"
+
+# This sets the language of build output to English.
+# Please keep this setting intact when reporting bugs.
+LC_MESSAGES=C
+MAKEOPTS="-j16"
+GENTOO_MIRRORS="https://mirrors.ustc.edu.cn/gentoo/"
+EMERGE_DEFAULT_OPTS="--keep-going --with-bdeps=y"
+# FEATURES="${FEATURES} -userpriv -usersandbox -sandbox"
+FEATURES="ccache"
+CCACHE_DIR="/var/cache/ccache"
+ACCEPT_KEYWORDS="~amd64"
+ACCEPT_LICENSE="*"
+L10N="en-US zh-CN en zh"
+LINGUAS="en_US zh_CN en zh"
+GRUB_PLATFORMS="efi-64"
+VIDEO_CARDS="nvidia"
+RUBY_TARGETS="ruby30"
+QEMU_SOFTMMU_TARGETS="alpha aarch64 arm i386 mips mips64 mips64el mipsel ppc ppc64 s390x sh4 sh4eb sparc sparc64 x86_64"
+QEMU_USER_TARGETS="alpha aarch64 arm armeb i386 mips mipsel ppc ppc64 ppc64abi32 s390x sh4 sh4eb sparc sparc32plus sparc64 x86_64"
+LLVM_TARGETS="X86 NVPTX"
+https_proxy="socks5h://127.0.0.1:7890"
+http_proxy="socks5h://127.0.0.1:7890"
+ftp_proxy="socks5h://127.0.0.1:7890"
+FETCHCOMMAND="curl --retry 3 --connect-timeout 60 --ftp-pasv -Lfo \"\${DISTDIR}/\${FILE}\" \"\${URI}\""
+RESUMECOMMAND="curl -C - --retry 3 --connect-timeout 60 --ftp-pasv -Lfo \"\${DISTDIR}/\${FILE}\" \"\${URI}\""
