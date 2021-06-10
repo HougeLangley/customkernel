@@ -18,7 +18,7 @@ RDEPEND="!sys-kernel/xanmod-sources"
 inherit kernel-2-src-prepare-overlay
 detect_version
 
-DESCRIPTION="Xanmod and Xanmod-CaCule sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
+DESCRIPTION="Xanmod and Xanmod-CaCule patchset for main kernel tree"
 HOMEPAGE="https://xanmod.org/"
 LICENSE+=" CDDL"
 SRC_URI="${KERNEL_BASE_URI}/linux-5.12.tar.xz
