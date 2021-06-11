@@ -19,7 +19,7 @@
 
 [Xanmod-Cacule-Hybrid](https://github.com/hamadmarri/cacule-cpu-scheduler) 是原始 Xanmod-Cacule，cjktty 和 uksm 补丁的混合体，Cacule 这个算法是从 FreeBSD 的 ULE 调度器学习过来，并有所创新的，大家不妨可以试试。这个内核将遵循以下原则更新：
 
-1. 内核跟随 [Xanmod-Cacule](https://github.com/xanmod/linux/tree/5.12-cacule)) 官方主线，补丁增加 cjktty 和 uksm
+1. 内核跟随 [Xanmod-Cacule](https://github.com/xanmod/linux/tree/5.12-cacule) 官方主线，补丁增加 cjktty 和 uksm
 2. 无其他特殊改变
 
 ## 写在最后
