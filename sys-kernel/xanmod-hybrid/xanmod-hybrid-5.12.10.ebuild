@@ -50,22 +50,21 @@ S="${WORKDIR}/linux-${PVR}-xanmod"
 
 UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-5.12.10-xanmod1.xz ${DISTDIR}/v1-cjktty.patch ${DISTDIR}/v1-uksm.patch"
 
-K_EXTRAEINFO="For more info on xanmod-hybrid and details on how to report problems,
-	see: ${HOMEPAGE}."
+K_EXTRAEINFO="For more info on xanmod-hybrid and details on how to report problems,	see: ${HOMEPAGE}."
 
-	pkg_setup() {
-		ewarn ""
-			ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
-			ewarn "If you need support, please contact the ${HOMEPAGE} directly."
-			ewarn "Do *not* open bugs in Gentoo's bugzilla unless you have issues with"
-			ewarn "the ebuilds. Thank you."
-			ewarn ""
+pkg_setup() {
+	ewarn ""
+	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
+	ewarn "If you need support, please contact the ${HOMEPAGE} directly."
+	ewarn "Do *not* open bugs in Gentoo's bugzilla unless you have issues with"
+	ewarn "the ebuilds. Thank you."
+	ewarn ""
 
-			kernel-2_pkg_setup
-	}
+	kernel-2_pkg_setup
+}
 
 pkg_postinst() {
 	elog "MICROCODES"
-		elog "Use xanmod-sources with microcodes"
-		elog "Read https://wiki.gentoo.org/wiki/Intel_microcode"
+	elog "Use xanmod-sources with microcodes"
+	elog "Read https://wiki.gentoo.org/wiki/Intel_microcode"
 }
