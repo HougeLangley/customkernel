@@ -41,7 +41,7 @@ ${GENPATCHES_URI}
 "
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/linux-${PVR}-xanmod"
+S="${WORKDIR}/linux-5.12.10-xanmod-r1"
 
 UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-5.12.10-xanmod1-cacule.xz ${DISTDIR}/v1-cjktty.patch ${DISTDIR}/v1-uksm.patch"
 
