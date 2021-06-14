@@ -22,10 +22,6 @@ K_SECURITY_UNSUPPORTED="1"
 # already included in pf-sources
 K_WANT_GENPATCHES="base extras"
 
-DEPEND="app-arch/cpio
-dev-util/pahole
-dev-libs/libbpf
-"
 RDEPEND="!sys-kernel/xanmod-sources
 !sys-kernel/xanmod-hybrid
 "
@@ -45,7 +41,7 @@ ${GENPATCHES_URI}
 "
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/linux-${PVR}-xanmod"
+S="${WORKDIR}/linux-5.12.10-xanmod-r1"
 
 UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-5.12.10-xanmod1-cacule.xz ${DISTDIR}/v1-cjktty.patch ${DISTDIR}/v1-uksm.patch"
 
