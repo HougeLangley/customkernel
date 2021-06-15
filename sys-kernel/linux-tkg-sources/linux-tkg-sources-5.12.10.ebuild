@@ -60,6 +60,7 @@ https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-pat
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.12/0012-misc-additions.patch
 https://github.com/HougeLangley/customkernel/releases/download/v5.12-others/v1-cjktty.patch
 https://github.com/HougeLangley/customkernel/releases/download/v5.12-others/v1-uksm.patch
+https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.12/bbr2-patches-v2/0001-bbr2-5.12-introduce-BBRv2.patch -> v2-bbr2.patch
 "
 KEYWORDS="~amd64"
 
@@ -83,7 +84,8 @@ PATCHES=( "${DISTDIR}/0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.
 "${DISTDIR}/0009-prjc_v5.12-r1.patch"
 "${DISTDIR}/0012-misc-additions.patch"
 "${DISTDIR}/v1-cjktty.patch"
-"${DISTDIR}/v1-uksm.patch" )
+"${DISTDIR}/v1-uksm.patch"
+"${DISTDIR}/v2-bbr2.patch" )
 
 K_EXTRAEINFO="For more info on linux-tkg-sources and details on how to report problems, see: ${HOMEPAGE}."
 
@@ -105,6 +107,7 @@ src_prepare() {
 		eapply "${DISTDIR}/0012-misc-additions.patch"	||	die
 		eapply "${DISTDIR}/v1-cjktty.patch"	||	die
 		eapply "${DISTDIR}/v1-uksm.patch"	||	die
+		eapply "${DISTDIR}/v2-bbr2.patch"	||	die
 	fi
 	# Apply Linux-TkG PDS patches
 	if	use	pds	;	then
@@ -122,6 +125,7 @@ src_prepare() {
 		eapply "${DISTDIR}/0012-misc-additions.patch"	||	die
 		eapply "${DISTDIR}/v1-cjktty.patch"	||	die
 		eapply "${DISTDIR}/v1-uksm.patch"	||	die
+		eapply "${DISTDIR}/v2-bbr2.patch"	||	die
 	fi
 	# Apply Linux-TKG MuQSS patches
 	if	use	muqss	;	then
@@ -138,6 +142,7 @@ src_prepare() {
 		eapply "${DISTDIR}/0012-misc-additions.patch"	||	die
 		eapply "${DISTDIR}/v1-cjktty.patch"	||	die
 		eapply "${DISTDIR}/v1-uksm.patch"	||	die
+		eapply "${DISTDIR}/v2-bbr2.patch"	||	die
 	fi
 
 	kernel-2_src_prepare
