@@ -41,7 +41,7 @@ LICENSE+=" CDDL"
 
 SRC_URI="
 ${KERNEL_BASE_URI}/linux-5.12.tar.xz
-${KERNEL_BASE_URI}/patch-5.12.10.xz
+${KERNEL_BASE_URI}/patch-5.12.11.xz
 ${GENPATCHES_URI}
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.12/0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.12/0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch
@@ -61,10 +61,11 @@ https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-pat
 https://github.com/HougeLangley/customkernel/releases/download/v5.12-others/v1-cjktty.patch
 https://github.com/HougeLangley/customkernel/releases/download/v5.12-others/v1-uksm.patch
 https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.12/bbr2-patches-v2/0001-bbr2-5.12-introduce-BBRv2.patch -> v2-bbr2.patch
+https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.12/cpu-patches-v4-sep/0001-cpu-5.12-merge-graysky-s-patchset.patch -> v4-graysky.patch
 "
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/linux-5.12.10-linux"
+S="${WORKDIR}/linux-5.12.11-linux"
 
 UNIPATCH_LIST_DEFAULT=( "${DISTDIR}/patch-5.12.10.xz" )
 
@@ -85,7 +86,8 @@ PATCHES=( "${DISTDIR}/0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.
 "${DISTDIR}/0012-misc-additions.patch"
 "${DISTDIR}/v1-cjktty.patch"
 "${DISTDIR}/v1-uksm.patch"
-"${DISTDIR}/v2-bbr2.patch" )
+"${DISTDIR}/v2-bbr2.patch"
+"${DISTDIR}/v4-graysky.patch" )
 
 K_EXTRAEINFO="For more info on linux-tkg-sources and details on how to report problems, see: ${HOMEPAGE}."
 
@@ -108,6 +110,7 @@ src_prepare() {
 		eapply "${DISTDIR}/v1-cjktty.patch"	||	die
 		eapply "${DISTDIR}/v1-uksm.patch"	||	die
 		eapply "${DISTDIR}/v2-bbr2.patch"	||	die
+		eapply "${DISTDIR}/v4-graysky.patch"	|| die
 	fi
 	# Apply Linux-TkG PDS patches
 	if	use	pds	;	then
@@ -126,6 +129,7 @@ src_prepare() {
 		eapply "${DISTDIR}/v1-cjktty.patch"	||	die
 		eapply "${DISTDIR}/v1-uksm.patch"	||	die
 		eapply "${DISTDIR}/v2-bbr2.patch"	||	die
+		eapply "${DISTDIR}/v4-graysky.patch"	|| die
 	fi
 	# Apply Linux-TKG MuQSS patches
 	if	use	muqss	;	then
@@ -143,6 +147,7 @@ src_prepare() {
 		eapply "${DISTDIR}/v1-cjktty.patch"	||	die
 		eapply "${DISTDIR}/v1-uksm.patch"	||	die
 		eapply "${DISTDIR}/v2-bbr2.patch"	||	die
+		eapply "${DISTDIR}/v4-graysky.patch"	|| die
 	fi
 
 	kernel-2_src_prepare
