@@ -67,7 +67,7 @@ KEYWORDS="~amd64"
 
 S="${WORKDIR}/linux-5.12.11-linux"
 
-UNIPATCH_LIST_DEFAULT=( "${DISTDIR}/patch-5.12.10.xz" )
+UNIPATCH_LIST_DEFAULT=( "${DISTDIR}/patch-5.12.11.xz" )
 
 PATCHES=( "${DISTDIR}/0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch"
 "${DISTDIR}/0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch"
