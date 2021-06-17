@@ -63,7 +63,7 @@ https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.12/cpu-patches-v5-sep
 "
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/linux-5.12.11-linux"
+S="${WORKDIR}/linux-5.12.11-linux-r1"
 
 UNIPATCH_LIST_DEFAULT=( "${DISTDIR}/patch-5.12.11.xz" )
 
