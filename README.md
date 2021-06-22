@@ -4,7 +4,7 @@
 
 **但是非常建议各位使用 Gentoo Linux 的朋友添加 [Gentoo-zh overlay](https://github.com/microcai/gentoo-zh) 源，这样能够得到更好更稳定的更新，谢谢你们的支持**
 
-**这两个内核都可以兼容 OpenZFS 文件爱你系统，望周知**
+**这两个内核都可以兼容 OpenZFS 文件系统，望周知**
 
 ### Xanmod-Hybrid 内核
 
