@@ -42,18 +42,18 @@ SRC_URI="
 ${KERNEL_BASE_URI}/linux-5.13.tar.xz
 ${GENPATCHES_URI}
 https://github.com/HougeLangley/customkernel/releases/download/v5.13-patch/patch-5.13.0-xanmod1
-https://github.com/HougeLangley/customkernel/releases/download/v5.13-patch/patch-5.13.0-xanmod1
+https://github.com/HougeLangley/customkernel/releases/download/v5.13-patch/patch-5.13.0-xanmod1-cacule
 https://github.com/HougeLangley/customkernel/releases/download/v5.13-others/v1-cjktty.patch
 https://github.com/HougeLangley/customkernel/releases/download/v5.13-others/v1-uksm.patch
 "
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/linux-5.13.0-xanmod"
+S="${WORKDIR}/linux-${PVR}-xanmod"
 
 K_EXTRAEINFO="For more info on xanmod-hybrid and details on how to report problems,	see: ${HOMEPAGE}."
 
 PATCHES=( "${DISTDIR}/patch-5.13.0-xanmod1"
-"${DISTDIR}/patch-5.13.0-xanmod1"
+"${DISTDIR}/patch-5.13.0-xanmod1-cacule"
 "${DISTDIR}/v1-cjktty.patch"
 "${DISTDIR}/v1-uksm.patch" )
 
@@ -66,7 +66,7 @@ src_prepare() {
 	fi
 	# Enable Xanmod-CaCule
 	if	use	cacule	;	then
-		eapply "${DISTDIR}/patch-5.13.0-xanmod1"	||	die
+		eapply "${DISTDIR}/patch-5.13.0-xanmod1-cacule"	||	die
 		eapply "${DISTDIR}/v1-cjktty.patch"	||	die
 		eapply "${DISTDIR}/v1-uksm.patch"	||	die
 	fi
