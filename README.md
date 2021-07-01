@@ -1,6 +1,6 @@
 # customkernel
 
-**如果你将我的 overlay 加入到系统中，不用担心，可以安心使用**
+**我发现还是有朋友将这个 overlay 加入到自己的系统中，而且出现一些奇奇怪怪的问题，我还是建议各位使用 gentoo-zh 里的，我一般会把稳定的推进去，这里可能存在问题，请大家斟酌**
 
 **但是非常建议各位使用 Gentoo Linux 的朋友添加 [Gentoo-zh overlay](https://github.com/microcai/gentoo-zh) 源，这样能够得到更好更稳定的更新，谢谢你们的支持**
 
