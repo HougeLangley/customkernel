@@ -48,7 +48,7 @@ https://github.com/HougeLangley/customkernel/releases/download/v5.13-others/v1-u
 "
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/linux-${PVR}-xanmod"
+S="${WORKDIR}/linux-${PV}-xanmod-r1"
 
 K_EXTRAEINFO="For more info on xanmod-hybrid and details on how to report problems,	see: ${HOMEPAGE}."
 
