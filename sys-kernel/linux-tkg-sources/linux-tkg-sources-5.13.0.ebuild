@@ -41,7 +41,6 @@ LICENSE+=" CDDL"
 
 SRC_URI="
 ${KERNEL_BASE_URI}/linux-5.13.tar.xz
-##${KERNEL_BASE_URI}/patch-5.12.14.xz##
 ${GENPATCHES_URI}
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch
