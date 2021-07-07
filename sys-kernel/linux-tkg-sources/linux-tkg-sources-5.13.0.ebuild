@@ -143,6 +143,7 @@ src_prepare() {
 		eapply "${DISTDIR}/0002-mm-Support-soft-dirty-flag-read-with-reset.patch"	||	die
 		eapply "${DISTDIR}/0002-clear-patches.patch"	||	die
 		eapply "${DISTDIR}/0003-glitched-base.patch"	||	die
+		eapply "${DISTDIR}/0003-cacule-5.13.patch"	||	die
 		eapply "${DISTDIR}/0003-glitched-cfs-additions.patch"	||	die
 		eapply "${DISTDIR}/0003-glitched-cfs.patch"	||	die
 		eapply "${DISTDIR}/0006-add-acs-overrides_iommu.patch"	|| die
