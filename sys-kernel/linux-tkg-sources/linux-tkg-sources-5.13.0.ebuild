@@ -47,7 +47,7 @@ https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-pat
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0002-clear-patches.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0002-mm-Support-soft-dirty-flag-read-with-reset.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0003-cacule-5.13.patch
-https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0003-glitched-base.patch
+https://github.com/HougeLangley/customkernel/releases/download/v5.13-others/0003-glitched-base.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0003-glitched-cfs-additions.patch
 https://github.com/Frogging-Family/linux-tkg/blob/master/linux-tkg-patches/5.13/0003-glitched-cfs.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0006-add-acs-overrides_iommu.patch
