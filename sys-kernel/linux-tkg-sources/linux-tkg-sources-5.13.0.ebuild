@@ -49,7 +49,7 @@ https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-pat
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0003-cacule-5.13.patch
 https://github.com/HougeLangley/customkernel/releases/download/v5.13-others/0003-glitched-base.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0003-glitched-cfs-additions.patch
-https://github.com/Frogging-Family/linux-tkg/blob/master/linux-tkg-patches/5.13/0003-glitched-cfs.patch
+https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0003-glitched-cfs.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0006-add-acs-overrides_iommu.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0007-v5.13-futex2_interface.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0007-v5.13-winesync.patch
