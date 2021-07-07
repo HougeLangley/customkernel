@@ -137,7 +137,7 @@ src_prepare() {
 		eapply "${DISTDIR}/v1-paragon-ntfs.patch"	||	die
 	fi
 	# Apply Linux-TKG CacULE patches
-	if	use	muqss	;	then
+	if	use	cacule	;	then
 		eapply "${DISTDIR}/0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch"	||	die
 		eapply "${DISTDIR}/0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch"	||	die
 		eapply "${DISTDIR}/0002-mm-Support-soft-dirty-flag-read-with-reset.patch"	||	die
