@@ -53,12 +53,14 @@ UNIPATCH_LIST="${DISTDIR}/patch-5.13.1-rt1-xanmod1.xz ${DISTDIR}/v1-cjktty.patch
 
 pkg_setup() {
 	ewarn ""
-	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
+	ewarn "${PN} is *NOT* supported by the Gentoo Kernel Project in any way."
 	ewarn "If you need support, please contact the ${HOMEPAGE} directly."
 	ewarn "Do *not* open bugs in Gentoo's bugzilla unless you have issues with"
 	ewarn "the ebuilds. Thank you."
 	ewarn ""
-
+	ewarn "${PN} is *NOT* supported by openZFS."
+	ewarn "${PN} is *NOT* supported by NVIDIA Driver."
+	ewarn ""
 	kernel-2_pkg_setup
 }
 
