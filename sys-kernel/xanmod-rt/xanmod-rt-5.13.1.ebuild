@@ -22,10 +22,6 @@ K_SECURITY_UNSUPPORTED="1"
 # already included in xanmod-rt
 K_WANT_GENPATCHES="base extras"
 
-# If you have been enable src_prepare-overlay
-# please unmerge sys-kernel/xanmod-sources
-RDEPEND="!sys-kernel/xanmod-sources"
-
 inherit kernel-2
 detect_version
 
