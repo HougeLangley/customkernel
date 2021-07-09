@@ -55,7 +55,7 @@ pkg_setup() {
 	ewarn ""
 	ewarn "${PN} is *NOT* supported by the Gentoo Kernel Project in any way."
 	ewarn "If you need support, please contact the ${HOMEPAGE} directly."
-	ewarn "Do *not* open bugs in Gentoo's bugzilla unless you have issues with"
+	ewarn "Do *NOT* open bugs in Gentoo's bugzilla unless you have issues with"
 	ewarn "the ebuilds. Thank you."
 	ewarn ""
 	ewarn "${PN} is *NOT* supported by openZFS."
