@@ -24,7 +24,10 @@ K_WANT_GENPATCHES="base extras"
 
 # If you have been enable src_prepare-overlay
 # please unmerge sys-kernel/xanmod-sources
-RDEPEND="!sys-kernel/xanmod-sources"
+RDEPEND="
+	!sys-kernel/xanmod-sources
+	!sys-kernel/xanmod-hybrid
+"
 
 inherit kernel-2
 detect_version
