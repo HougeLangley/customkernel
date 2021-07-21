@@ -28,7 +28,9 @@ Xanmod 内核补丁是目前全网性能最好的，突出表现在响应速度�
 
 Linux-TkG 内核因为自己曾经也是忠实使用者，还是很喜欢的。不过从最近的测试情况来看，不论是 BMQ 还是 PDS 在游戏方面的表现都不如 Xanmod，有兴趣的可以参考下面的两个视频。
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/mNKXumLlxII&t/0.jpg)](https://www.youtube.com/watch?v=mNKXumLlxII&t)
+[Xanmod vs Xanmod-CaCULE](https://www.youtube.com/watch?v=mNKXumLlxII&t) ，但是大家注意，这里 Xanmod-CaCULE 中使用的是实验性功能的 RDB CPU 调度器，所以性能表现不佳是完全可以理解的。
+
+[BMQ VS PDS VS MuQSS](https://www.youtube.com/watch?v=-qFXu_5T9Dg&t) 。
 
 以上就是该 overlay 现在和将来的目标，维护这三个 ebuild，持续更新，为了更好的性能，为了我们共同的挚爱—Linux Kernel。
 
