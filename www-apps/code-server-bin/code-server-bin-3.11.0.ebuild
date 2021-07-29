@@ -28,7 +28,7 @@ DEPEND="
 "
 RDEPEND="
 	${DEPEND}
-	net-libs/nodejs[ssl]
+	>=net-libs/nodejs-14.16.1[ssl]
 	sys-apps/ripgrep
 	gnome-keyring? (
 		app-crypt/libsecret
