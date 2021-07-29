@@ -82,7 +82,7 @@ src_install() {
 
 	dosym "../../../../../../../../usr/bin/rg" "${EPREFIX}/usr/lib/${MY_PN}/lib/vscode/node_modules/vscode-ripgrep/bin/rg"
 
-	systemd_dounit "${FILESDIR}/${MY_PN}.service"
+	systemd_dounit "${FILESDIR}/${MY_PN}@.service"
 }
 
 pkg_postinst() {
