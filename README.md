@@ -6,7 +6,7 @@
 
 **这两个内核都可以兼容 OpenZFS 文件系统，望周知**
 
-**目前最新的一次第三方内核横评可以参考 [Phoronix](https://www.phoronix.com/scan.php?page=article&item=ryzen5-xanmod-liquorix&num=1)
+**目前最新的一次第三方内核横评可以参考 [Phoronix](https://www.phoronix.com/scan.php?page=article&item=ryzen5-xanmod-liquorix&num=1)**
 
 ### Xanmod-Hybrid 内核
 
