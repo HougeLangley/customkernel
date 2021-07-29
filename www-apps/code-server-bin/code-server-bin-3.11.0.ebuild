@@ -57,7 +57,7 @@ src_install() {
 	fperms +x "/usr/lib/${MY_PN}/bin/${MY_PN}"
 	dosym "../../usr/lib/${MY_PN}/bin/${MY_PN}" "${EPREFIX}/usr/bin/${MY_PN}"
 
-	dosym "../../../../../../../../usr/bin/rg" "${EPREFIX}/usr/lib/${MY_PN}/lib/vscode/node_modules/vscode-ripgrep/bin/rg"
+	#dosym "../../../../../../../../usr/bin/rg" "${EPREFIX}/usr/lib/${MY_PN}/lib/vscode/node_modules/vscode-ripgrep/bin/rg"
 
 	systemd_dounit "${FILESDIR}/${MY_PN}@.service"
 	systemd_dounit "${FILESDIR}/${MY_PN}-user.service"
