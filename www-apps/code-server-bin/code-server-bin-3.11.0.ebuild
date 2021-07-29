@@ -28,12 +28,16 @@ DEPEND="
 "
 RDEPEND="
 	${DEPEND}
+	>=net-libs/nodejs-12.16.1:0/12[ssl]
+	sys-apps/ripgrep
 	gnome-keyring? (
 		app-crypt/libsecret
 	)
 "
 
 S="${WORKDIR}/${MY_P}-linux-${ARCH}"
+
+PATCHES=( "${FILESDIR}/${PN}-node.patch" )
 
 DOCS=( "README.md" "ThirdPartyNotices.txt" )
 
@@ -47,6 +51,25 @@ QA_PRESTRIPPED="
 
 src_prepare() {
 	default
+
+	# We remove as much precompiled code as we can,
+	# node modules not written in JS cannot be removed
+	# thus "-bin".
+
+	# use system node
+	rm ./node ./lib/node \
+		|| die "failed to remove bundled nodejs"
+
+	# remove bundled ripgrep binary
+	rm ./lib/vscode/node_modules/vscode-ripgrep/bin/rg \
+		|| die "failed to remove bundled ripgrep"
+
+	# not needed
+	rm ./code-server || die
+	rm ./postinstall.sh || die
+
+	# already in /usr/portage/licenses/MIT
+	rm ./LICENSE.txt || die
 }
 
 src_install() {
@@ -57,7 +80,7 @@ src_install() {
 	fperms +x "/usr/lib/${MY_PN}/bin/${MY_PN}"
 	dosym "../../usr/lib/${MY_PN}/bin/${MY_PN}" "${EPREFIX}/usr/bin/${MY_PN}"
 
-	#dosym "../../../../../../../../usr/bin/rg" "${EPREFIX}/usr/lib/${MY_PN}/lib/vscode/node_modules/vscode-ripgrep/bin/rg"
+	dosym "../../../../../../../../usr/bin/rg" "${EPREFIX}/usr/lib/${MY_PN}/lib/vscode/node_modules/vscode-ripgrep/bin/rg"
 
 	systemd_dounit "${FILESDIR}/${MY_PN}@.service"
 	systemd_dounit "${FILESDIR}/${MY_PN}-user.service"
