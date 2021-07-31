@@ -67,7 +67,7 @@ https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.13/ntfs3-patches/0001
 "
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/linux-${PV}-linux"
+S="${WORKDIR}/linux-${PV}-linux-r1"
 
 UNIPATCH_LIST_DEFAULT=( "${DISTDIR}/patch-5.13.6.xz" )
 
