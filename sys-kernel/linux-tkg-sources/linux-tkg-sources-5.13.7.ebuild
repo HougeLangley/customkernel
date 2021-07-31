@@ -41,14 +41,14 @@ LICENSE+=" CDDL"
 
 SRC_URI="
 ${KERNEL_BASE_URI}/linux-5.13.tar.xz
-${KERNEL_BASE_URI}/patch-5.13.6.xz
+${KERNEL_BASE_URI}/patch-5.13.7.xz
 ${GENPATCHES_URI}
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0002-clear-patches.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0002-mm-Support-soft-dirty-flag-read-with-reset.patch
-https://raw.githubusercontent.com/hamadmarri/cacule-cpu-scheduler/master/patches/CacULE/v5.13/cacule-5.13.patch -> 0002-v3-cacule-5.13.patch
-https://raw.githubusercontent.com/hamadmarri/cacule-cpu-scheduler/master/patches/CacULE/v5.13/rdb-5.13.patch -> 0003-v3-rdb-5.13.patch
+https://raw.githubusercontent.com/hamadmarri/cacule-cpu-scheduler/master/patches/CacULE/v5.13/cacule-5.13.patch -> 0002-v4-cacule-5.13.patch
+https://raw.githubusercontent.com/hamadmarri/cacule-cpu-scheduler/master/patches/CacULE/v5.13/rdb-5.13.patch -> 0003-v4-rdb-5.13.patch
 https://github.com/HougeLangley/customkernel/releases/download/v5.13-others/0003-glitched-base.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0003-glitched-cfs.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0006-add-acs-overrides_iommu.patch
@@ -67,16 +67,16 @@ https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.13/ntfs3-patches/0001
 "
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/linux-${PV}-linux-r1"
+S="${WORKDIR}/linux-${PV}-linux"
 
-UNIPATCH_LIST_DEFAULT=( "${DISTDIR}/patch-5.13.6.xz" )
+UNIPATCH_LIST_DEFAULT=( "${DISTDIR}/patch-5.13.7.xz" )
 
 PATCHES=( "${DISTDIR}/0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch"
 "${DISTDIR}/0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch"
 "${DISTDIR}/0002-mm-Support-soft-dirty-flag-read-with-reset.patch"
 "${DISTDIR}/0002-clear-patches.patch"
-"${DISTDIR}/0002-v3-cacule-5.13.patch"
-"${DISTDIR}/0003-v3-rdb-5.13.patch"
+"${DISTDIR}/0002-v4-cacule-5.13.patch"
+"${DISTDIR}/0003-v4-rdb-5.13.patch"
 "${DISTDIR}/0003-glitched-base.patch"
 "${DISTDIR}/0003-glitched-cfs.patch"
 "${DISTDIR}/0006-add-acs-overrides_iommu.patch"
@@ -146,8 +146,8 @@ src_prepare() {
 		eapply "${DISTDIR}/0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch"	||	die
 		eapply "${DISTDIR}/0002-mm-Support-soft-dirty-flag-read-with-reset.patch"	||	die
 		eapply "${DISTDIR}/0002-clear-patches.patch"	||	die
-		eapply "${DISTDIR}/0002-v3-cacule-5.13.patch"	||	die
-		eapply "${DISTDIR}/0003-v3-rdb-5.13.patch"	||	die
+		eapply "${DISTDIR}/0002-v4-cacule-5.13.patch"	||	die
+		eapply "${DISTDIR}/0003-v4-rdb-5.13.patch"	||	die
 		eapply "${DISTDIR}/0003-glitched-base.patch"	||	die
 		eapply "${DISTDIR}/0003-glitched-cfs.patch"	||	die
 		eapply "${DISTDIR}/0006-add-acs-overrides_iommu.patch"	|| die
