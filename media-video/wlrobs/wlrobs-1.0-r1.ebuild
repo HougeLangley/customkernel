@@ -11,7 +11,7 @@ then
 	EHG_REPO_URI="https://hg.sr.ht/~scoopta/wlrobs"
 else
 	SRC_URI="https://hg.sr.ht/~scoopta/wlrobs/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	S="${WORKDIR}/${PN}-v${PV}-r1"
+	S="${WORKDIR}/${PN}-v${PV}"
 	KEYWORDS="~amd64"
 fi
 
