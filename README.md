@@ -6,6 +6,8 @@
 
 **这两个内核都可以兼容 OpenZFS 文件系统，望周知**
 
+**目前最新的一次第三方内核横评可以参考 [Phoronix](https://www.phoronix.com/scan.php?page=article&item=ryzen5-xanmod-liquorix&num=1)**
+
 ### Xanmod-Hybrid 内核
 
 [Xanmod-Hybrid](https://xanmod.org/) 是 Linux 第三方定制内核中久负盛名的。大家可以通过 USE 来启用自己喜欢的 CPU 调度器，我将原始版本 xanmod，xanmod-cacule 并加上 cjktty 和 uksm，为了区别 xanmod 原始贡献者的版本，取了这个名字。原始 Xanmod 内核通过对默认的 CPU 调度器做足优化的情况下，能够在 [Phoronix Benchmark](https://www.phoronix.com/scan.php?page=article&item=xanmod-2020-kernel&num=3) 中击败众多对手，比方说 [Liquorix](https://liquorix.net/)。并且 Xanmod 的在其官方主页支持基于 Debian 的所有发行版，当然，还有 [Archlinux](https://aur.archlinux.org/packages/linux-xanmod/) 和 [Gentoo](https://gitlab.com/src_prepare/src_prepare-overlay/-/tree/master/sys-kernel/xanmod-sources) 。那么既然已经有 Gentoo 的 overlay 了，我为什么还要做一个 overlay 呢？
