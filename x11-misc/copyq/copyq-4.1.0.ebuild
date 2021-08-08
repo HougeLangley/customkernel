@@ -11,36 +11,36 @@ SRC_URI="https://github.com/hluk/CopyQ/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64"
 IUSE="test"
 
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	dev-qt/qtcore:5
-	dev-qt/qtgui:5
-	dev-qt/qtnetwork:5
-	dev-qt/qtscript:5
-	dev-qt/qtsvg:5
-	dev-qt/qtwidgets:5
-	dev-qt/qtx11extras:5
+	dev-qt/qtcore
+	dev-qt/qtgui[wayland]
+	dev-qt/qtnetwork
+	dev-qt/qtscript
+	dev-qt/qtsvg
+	dev-qt/qtwidgets
+	dev-qt/qtx11extras
 	x11-libs/libX11
 	x11-libs/libXfixes
 	x11-libs/libXtst
 "
 DEPEND="${RDEPEND}
-	test? ( dev-qt/qttest:5 )"
+	test? ( dev-qt/qttest )"
 BDEPEND="
-	dev-qt/linguist-tools:5
+	dev-qt/linguist-tools
 "
 
 S="${WORKDIR}/CopyQ-${PV}"
 
 src_configure() {
 	local mycmakeargs=(
+		-DCMAKE_INSTALL_PREFIX="/usr"
 		-DPLUGIN_INSTALL_PREFIX="/usr/$(get_libdir)/${PN}/plugins"
 		-DWITH_TESTS=$(usex test)
-		-DWITH_WEBKIT=OFF
 	)
 	cmake_src_configure
 }
