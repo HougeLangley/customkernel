@@ -25,6 +25,7 @@ RDEPEND="
 	x11-libs/libXfixes
 	x11-libs/libXtst
 	kde-frameworks/extra-cmake-modules
+	kde-frameworks/knotifications
 "
 DEPEND="${DEPEND}"
 BDEPEND="${DEPEND}
