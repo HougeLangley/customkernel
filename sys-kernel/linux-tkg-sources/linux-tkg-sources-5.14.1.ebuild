@@ -124,7 +124,6 @@ src_prepare() {
 		eapply "${DISTDIR}/v1-0002-clear-patches.patch"	||	die
 		eapply "${DISTDIR}/v1-0002-mm-Support-soft-dirty-flag-read-with-reset.patch"	||	die
 		eapply "${DISTDIR}/v1-0003-glitched-base.patch"	||	die
-		eapply "${DISTDIR}/v1-0003-glitched-cfs-additions.patch"	||	die
 		eapply "${DISTDIR}/v1-0006-add-acs-overrides_iommu.patch"	||	die
 		eapply "${DISTDIR}/v1-0007-v5.14-futex2_interface.patch"	|| die
 		eapply "${DISTDIR}/v1-0007-v5.14-fsync.patch"	||	die
