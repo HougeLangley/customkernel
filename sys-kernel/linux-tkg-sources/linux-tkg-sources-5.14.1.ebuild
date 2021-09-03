@@ -85,7 +85,7 @@ PATCHES=( "${DISTDIR}/v1-0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-
 "${DISTDIR}/prjc_v5.14-r0.patch"
 "${DISTDIR}/fix_r0.patch"
 "${DISTDIR}/v1-0012-misc-additions.patch"
-"${DISTDIR}/v1-cjktty.patch"
+"${DISTDIR}/v1-cjktty-5.14.patch"
 "${DISTDIR}/v1-bbr2.patch"
 "${DISTDIR}/v1-gcc-01.patch"
 "${DISTDIR}/v1-gcc-03.patch"
@@ -110,7 +110,7 @@ src_prepare() {
 		eapply "${DISTDIR}/prjc_v5.14-r0.patch"	||	die
 		eapply "${DISTDIR}/fix_r0.patch"	||	die
 		eapply "${DISTDIR}/v1-0012-misc-additions.patch"	||	die
-		eapply "${DISTDIR}/v1-cjktty.patch"	||	die
+		eapply "${DISTDIR}/v1-cjktty-5.14.patch"	||	die
 		eapply "${DISTDIR}/v1-bbr2.patch"	||	die
 		eapply "${DISTDIR}/v1-gcc-01.patch"	||	die
 		eapply "${DISTDIR}/v1-gcc-03.patch"	||	die
@@ -132,7 +132,7 @@ src_prepare() {
 		eapply "${DISTDIR}/prjc_v5.14-r0.patch"	||	die
 		eapply "${DISTDIR}/fix_r0.patch"	||	die
 		eapply "${DISTDIR}/v1-0012-misc-additions.patch"	||	die
-		eapply "${DISTDIR}/v1-cjktty.patch"	||	die
+		eapply "${DISTDIR}/v1-cjktty-5.14.patch"	||	die
 		eapply "${DISTDIR}/v1-bbr2.patch"	||	die
 		eapply "${DISTDIR}/v1-gcc-01.patch"	||	die
 		eapply "${DISTDIR}/v1-gcc-03.patch"	||	die
@@ -152,7 +152,7 @@ src_prepare() {
 		eapply "${DISTDIR}/v1-0007-v5.14-fsync.patch"	||	die
 		eapply "${DISTDIR}/v1-0007-v5.14-winesync.patch"	||	die
 		eapply "${DISTDIR}/v1-0012-misc-additions.patch"	||	die
-		eapply "${DISTDIR}/v1-cjktty.patch"	||	die
+		eapply "${DISTDIR}/v1-cjktty-5.14.patch"	||	die
 		eapply "${DISTDIR}/v1-bbr2.patch"	||	die
 		eapply "${DISTDIR}/v1-gcc-01.patch"	||	die
 		eapply "${DISTDIR}/v1-gcc-03.patch"	||	die
