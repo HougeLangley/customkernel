@@ -47,6 +47,7 @@ ${GENPATCHES_URI}
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.14/0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch -> v1-0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.14/0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch -> v1-0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.14/0002-clear-patches.patch -> v1-0002-clear-patches.patch
+https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.14/ll-patches/0001-LL-kconfig-add-750Hz-timer-interrupt-kernel-config-o.patch -> v1-750HZ.patch
 https://github.com/HougeLangley/customkernel/releases/download/v5.14-others/v1-cacule-5.14-full.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.14/0002-mm-Support-soft-dirty-flag-read-with-reset.patch -> v1-0002-mm-Support-soft-dirty-flag-read-with-reset.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.14/0003-glitched-base.patch -> v1-0003-glitched-base.patch
@@ -74,6 +75,7 @@ UNIPATCH_LIST_DEFAULT=( "${DISTDIR}/patch-5.14.1.xz" )
 PATCHES=( "${DISTDIR}/v1-0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch"
 "${DISTDIR}/v1-0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch"
 "${DISTDIR}/v1-0002-clear-patches.patch"
+"${DISTDIR}/v1-750HZ.patch"
 "${DISTDIR}/v1-cacule-5.14-full.patch"
 "${DISTDIR}/v1-0002-mm-Support-soft-dirty-flag-read-with-reset.patch"
 "${DISTDIR}/v1-0003-glitched-base.patch"
@@ -100,6 +102,7 @@ src_prepare() {
 		eapply "${DISTDIR}/v1-0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch"	||	die
 		eapply "${DISTDIR}/v1-0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch"	||	die
 		eapply "${DISTDIR}/v1-0002-clear-patches.patch"	||	die
+		eapply "${DISTDIR}/v1-750HZ.patch"	||	die
 		eapply "${DISTDIR}/v1-0002-mm-Support-soft-dirty-flag-read-with-reset.patch"	||	die
 		eapply "${DISTDIR}/v1-0003-glitched-base.patch"	||	die
 		eapply "${DISTDIR}/v1-0003-glitched-cfs-additions.patch"	||	die
@@ -122,6 +125,7 @@ src_prepare() {
 		eapply "${DISTDIR}/v1-0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch"	||	die
 		eapply "${DISTDIR}/v1-0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch"	||	die
 		eapply "${DISTDIR}/v1-0002-clear-patches.patch"	||	die
+		eapply "${DISTDIR}/v1-750HZ.patch"	||	die
 		eapply "${DISTDIR}/v1-0002-mm-Support-soft-dirty-flag-read-with-reset.patch"	||	die
 		eapply "${DISTDIR}/v1-0003-glitched-base.patch"	||	die
 		eapply "${DISTDIR}/v1-0003-glitched-cfs-additions.patch"	||	die
@@ -144,6 +148,7 @@ src_prepare() {
 		eapply "${DISTDIR}/v1-0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch"	||	die
 		eapply "${DISTDIR}/v1-0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch"	||	die
 		eapply "${DISTDIR}/v1-0002-clear-patches.patch"	||	die
+		eapply "${DISTDIR}/v1-750HZ.patch"	||	die
 		eapply "${DISTDIR}/v1-cacule-5.14-full.patch"	||	die
 		eapply "${DISTDIR}/v1-0002-mm-Support-soft-dirty-flag-read-with-reset.patch"	||	die
 		eapply "${DISTDIR}/v1-0003-glitched-base.patch"	||	die
