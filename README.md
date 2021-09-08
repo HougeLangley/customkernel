@@ -1,10 +1,10 @@
 # customkernel
 
-**我发现还是有朋友将这个 overlay 加入到自己的系统中，而且出现一些奇奇怪怪的问题，我还是建议各位使用 gentoo-zh 里的，我一般会把稳定的推进去，这里可能存在问题，请大家斟酌**
+**我发现还是有朋友将这个 overlay 加入到自己的系统中，而且出现一些奇奇怪怪的问题，不建议各位使用这个 Overlay，我一般会利用这个 Overlay 做一些试验。请大家斟酌**
 
-**但是非常建议各位使用 Gentoo Linux 的朋友添加 [Gentoo-zh overlay](https://github.com/microcai/gentoo-zh) 源，这样能够得到更好更稳定的更新，谢谢你们的支持**
+**非常建议各位使用 Gentoo Linux 的朋友添加 [Gentoo-zh overlay](https://github.com/microcai/gentoo-zh) 源，这样能够得到更好更稳定的更新，谢谢你们的支持**
 
-**这两个内核都可以兼容 OpenZFS 文件系统，望周知**
+**目前 Linux-tkg 和 Xanmod-hybrid 都可以兼容 OpenZFS 文件系统，但是 RT 内核是不支持的，望周知**
 
 **目前最新的一次第三方内核横评可以参考 [Phoronix](https://www.phoronix.com/scan.php?page=article&item=ryzen5-xanmod-liquorix&num=1)**
 
@@ -14,14 +14,14 @@
 
 1. [src_prepare overlay](https://gitlab.com/src_prepare/src_prepare-overlay) 只提供稳定版本的 Xanmod 内核。而我们作为[Gentoo-zh](https://github.com/microcai/gentoo-zh) 要做出差异化，做出自己的调性；
 2. config 配置文件在内核源码安装后就有了，大家注意源码文件夹中有一个名字叫做 CONFIG 的，从中把大家需要的配置文件拷贝到内核源码目录下，取名 .config 就可以开始编译了；
-3. UKSM 补丁，来源是 [Piotr Górski](https://gitlab.com/sirlucjan/kernel-patches/-/tree/master) 提供的各式各样第三方补丁，并且根据主线会实时更新；
+3. ~~UKSM 补丁，来源是 [Piotr Górski](https://gitlab.com/sirlucjan/kernel-patches/-/tree/master) 提供的各式各样第三方补丁，并且根据主线会实时更新；~~
 4. cjktty 补丁，来源是 [zhmars](https://github.com/zhmars/cjktty-patches) 提供的第三方补丁，支持关注并保持更新。
 
 ### Linux-TkG 内核
 
 [Linux-TkG](https://github.com/Frogging-Family/linux-tkg) 最早是 Archlinux 中一个小有名气的魔改内核，包括了非常多的补丁，BMQ, PDS, MuQSS，并且还加上了一些第三方的补丁集进行优化和增强。大家不妨可以试试。这个内核将遵循以下原则更新：
 
-1. 内核主要补丁跟随 [Linux-TkG](https://github.com/Frogging-Family/linux-tkg) 官方主线，次要的几个补丁增加 cjktty，uksm 和 BBR2
+1. 内核主要补丁跟随 [Linux-TkG](https://github.com/Frogging-Family/linux-tkg) 官方主线，次要的几个补丁增加 cjktty，~~uksm~~ 和 BBR2
 2. 默认的 config 文件在 ebuild 同目录下的 config 文件中，需要的朋友复制粘贴后，稍加配置就能使用了。
 
 ## 写在最后
