@@ -20,7 +20,7 @@ K_SECURITY_UNSUPPORTED="1"
 
 # We want the very basic patches from gentoo-sources, experimental patch is
 # already included in xanmod-hybrid
-K_WANT_GENPATCHES="base"
+# K_WANT_GENPATCHES="base"
 
 # Default enable Xanmod, You have to choose one of them.
 # Both of them will make some errors
@@ -44,7 +44,6 @@ LICENSE+=" CDDL"
 
 SRC_URI="
 ${KERNEL_BASE_URI}/linux-5.15.tar.xz
-${GENPATCHES_URI}
 https://github.com/HougeLangley/customkernel/releases/download/v5.15-patch/patch-5.15.0-xanmod1
 https://github.com/HougeLangley/customkernel/releases/download/v5.14-patch/patch-5.14.15-xanmod1-cacule
 https://github.com/HougeLangley/customkernel/releases/download/v5.15-others/v1-cjktty-5.15.patch
