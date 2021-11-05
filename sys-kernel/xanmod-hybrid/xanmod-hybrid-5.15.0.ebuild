@@ -43,7 +43,7 @@ HOMEPAGE="https://github.com/HougeLangley/customkernel"
 LICENSE+=" CDDL"
 
 SRC_URI="
-${KERNEL_BASE_URI}/linux-5.14.tar.xz
+${KERNEL_BASE_URI}/linux-5.15.tar.xz
 ${GENPATCHES_URI}
 https://github.com/HougeLangley/customkernel/releases/download/v5.15-patch/patch-5.15.0-xanmod1
 https://github.com/HougeLangley/customkernel/releases/download/v5.14-patch/patch-5.14.15-xanmod1-cacule
