@@ -4,7 +4,7 @@
 
 **非常建议各位使用 Gentoo Linux 的朋友添加 [Gentoo-zh overlay](https://github.com/microcai/gentoo-zh) 源，这样能够得到更好更稳定的更新，谢谢你们的支持**
 
-**目前 Linux-tkg 和 Xanmod-hybrid 都可以兼容 OpenZFS 文件系统，但是 RT 内核是不支持的，望周知**
+**Xanmod-hybrid 都可以兼容 OpenZFS 文件系统，但是 RT 内核是不支持的，望周知**
 
 **目前最新的一次第三方内核横评可以参考 [Phoronix](https://www.phoronix.com/scan.php?page=article&item=ryzen5-xanmod-liquorix&num=1)**
 
@@ -17,18 +17,9 @@
 3. ~~UKSM 补丁，来源是 [Piotr Górski](https://gitlab.com/sirlucjan/kernel-patches/-/tree/master) 提供的各式各样第三方补丁，并且根据主线会实时更新；~~
 4. cjktty 补丁，来源是 [zhmars](https://github.com/zhmars/cjktty-patches) 提供的第三方补丁，支持关注并保持更新。
 
-### Linux-TkG 内核
-
-[Linux-TkG](https://github.com/Frogging-Family/linux-tkg) 最早是 Archlinux 中一个小有名气的魔改内核，包括了非常多的补丁，BMQ, PDS, MuQSS，并且还加上了一些第三方的补丁集进行优化和增强。大家不妨可以试试。这个内核将遵循以下原则更新：
-
-1. 内核主要补丁跟随 [Linux-TkG](https://github.com/Frogging-Family/linux-tkg) 官方主线，次要的几个补丁增加 cjktty，~~uksm~~ 和 BBR2
-2. 默认的 config 文件在 ebuild 同目录下的 config 文件中，需要的朋友复制粘贴后，稍加配置就能使用了。
-
 ## 写在最后
 
 Xanmod 内核补丁是目前全网性能最好的，突出表现在响应速度。希望大家喜欢。
-
-Linux-TkG 内核因为自己曾经也是忠实使用者，还是很喜欢的。不过从最近的测试情况来看，不论是 BMQ 还是 PDS 在游戏方面的表现都不如 Xanmod，有兴趣的可以参考下面的两个视频。
 
 [Xanmod vs Xanmod-CaCULE](https://www.youtube.com/watch?v=mNKXumLlxII&t) ，但是大家注意，这里 Xanmod-CaCULE 中使用的是实验性功能的 RDB CPU 调度器，所以性能表现不佳是完全可以理解的。
 
