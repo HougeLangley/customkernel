@@ -49,7 +49,7 @@ https://github.com/HougeLangley/customkernel/releases/download/v5.15-patch/patch
 https://github.com/HougeLangley/customkernel/releases/download/v5.15-patch/patch-5.15.5-xanmod1-tt
 https://github.com/HougeLangley/customkernel/releases/download/v5.15-others/v1-cjktty-5.15.patch
 "
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64 ~riscv"
 
 S="${WORKDIR}/linux-${PV}-xanmod"
 
