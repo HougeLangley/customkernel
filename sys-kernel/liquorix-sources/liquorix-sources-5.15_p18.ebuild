@@ -33,7 +33,7 @@ DEPEND="
 	app-arch/cpio
 	sys-devel/bc
 	sys-apps/kmod
-	dev-libs/libelf
+	dev-libs/elfutils
 	dev-util/pahole
 "
 
