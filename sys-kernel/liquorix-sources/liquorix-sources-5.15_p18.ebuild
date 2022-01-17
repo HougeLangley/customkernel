@@ -24,7 +24,7 @@ K_WANT_GENPATCHES="base	extras"
 
 # Default enable Xanmod, You have to choose one of them.
 # Both of them will make some errors
-IUSE="+cjk"
+IUSE="cjk"
 
 # If you have been enable src_prepare-overlay
 # please unmerge sys-kernel/xanmod-sources
@@ -65,9 +65,7 @@ src_prepare() {
 		eapply "${DISTDIR}/v1-cjktty-5.15.patch"	||	die
 	fi
 	# Disable CJKTTY
-	if	use	cacule	;	then
 		eapply "${DISTDIR}/v5.15.15-lqx1.patch"	||	die
-	fi
 
 	kernel-2_src_prepare
 }
