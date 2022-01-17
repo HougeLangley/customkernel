@@ -65,7 +65,9 @@ src_prepare() {
 		eapply "${DISTDIR}/v1-cjktty-5.15.patch"	||	die
 	fi
 	# Disable CJKTTY
+	if	use -cjk ;	then
 		eapply "${DISTDIR}/v5.15.15-lqx1.patch"	||	die
+	fi
 
 	kernel-2_src_prepare
 }
