@@ -62,7 +62,7 @@ src_prepare() {
 	# Default enable CJKTTY
 	if	use	cjk	;	then
 		eapply "${DISTDIR}/v5.15.15-lqx1.patch"	||	die
-		eapply "${DISTDIR}/v1-cjktty-5.16.patch"	||	die
+		eapply "${DISTDIR}/v1-cjktty-5.15.patch"	||	die
 	fi
 	# Disable CJKTTY
 	if	use	cacule	;	then
