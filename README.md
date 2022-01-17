@@ -17,14 +17,22 @@
 3. ~~UKSM 补丁，来源是 [Piotr Górski](https://gitlab.com/sirlucjan/kernel-patches/-/tree/master) 提供的各式各样第三方补丁，并且根据主线会实时更新；~~
 4. cjktty 补丁，来源是 [zhmars](https://github.com/zhmars/cjktty-patches) 提供的第三方补丁，支持关注并保持更新。
 
+### Xanmod-RT 内核
+
+[RT内核](https://baike.baidu.com/item/RT-Linux/4376175) 是实时内核，这个内核并不是通用内核，或者是大家经常使用的那种，大部分时候需要应用程序支持，才能获得最大的效益。所以，大家根据自己的实际情况选择安装。
+
+### Liquorix 内核
+
+[Liquorix内核](https://liquorix.net/) 是比较老牌针对媒体、音乐和游戏优化的内核。依照版本不同，和 Xanmod 对比，互有胜负。大家选择使用就好。默认配置文件在 ebuild 所在目录下。
+
 ## 写在最后
 
-Xanmod 内核补丁是目前全网性能最好的，突出表现在响应速度。希望大家喜欢。
+最近一段时间第三方内核横品少了，不过就目前大家使用的习惯来看，Xanmod 内核和 Liquorix 是社区性能表现最为优异的。希望大家喜欢。
 
 [Xanmod vs Xanmod-TT](https://www.youtube.com/watch?v=mNKXumLlxII&t) ，但是大家注意，这里 Xanmod-tt 中使用的是实验性功能的 RDB CPU 调度器，所以性能表现不佳是完全可以理解的。
 
 [BMQ VS PDS VS MuQSS](https://www.youtube.com/watch?v=-qFXu_5T9Dg&t) 。
 
-以上就是该 overlay 现在和将来的目标，维护这三个 ebuild，持续更新，为了更好的性能，为了我们共同的挚爱—Linux Kernel。
+以上就是该 overlay 现在情况，将持续维护。
 
-希望大家多多提意见，多多提 issue，多多点赞。
+希望大家多多提意见。
