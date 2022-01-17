@@ -10,7 +10,7 @@
 
 ### Xanmod-Hybrid 内核
 
-[Xanmod-Hybrid](https://xanmod.org/) 是 Linux 第三方定制内核中久负盛名的。大家可以通过 USE 来启用自己喜欢的 CPU 调度器，我将原始版本 xanmod，xanmod-cacule 并加上 cjktty 和 uksm，为了区别 xanmod 原始贡献者的版本，取了这个名字。原始 Xanmod 内核通过对默认的 CPU 调度器做足优化的情况下，能够在 [Phoronix Benchmark](https://www.phoronix.com/scan.php?page=article&item=xanmod-2020-kernel&num=3) 中击败众多对手，比方说 [Liquorix](https://liquorix.net/)。并且 Xanmod 的在其官方主页支持基于 Debian 的所有发行版，当然，还有 [Archlinux](https://aur.archlinux.org/packages/linux-xanmod/) 和 [Gentoo](https://gitlab.com/src_prepare/src_prepare-overlay/-/tree/master/sys-kernel/xanmod-sources) 。那么既然已经有 Gentoo 的 overlay 了，我为什么还要做一个 overlay 呢？
+[Xanmod-Hybrid](https://xanmod.org/) 是 Linux 第三方定制内核中久负盛名的。大家可以通过 USE 来启用自己喜欢的 CPU 调度器，我将原始版本 xanmod，xanmod-tt 并加上 cjktty 和 uksm，为了区别 xanmod 原始贡献者的版本，取了这个名字。原始 Xanmod 内核通过对默认的 CPU 调度器做足优化的情况下，能够在 [Phoronix Benchmark](https://www.phoronix.com/scan.php?page=article&item=xanmod-2020-kernel&num=3) 中击败众多对手，比方说 [Liquorix](https://liquorix.net/)。并且 Xanmod 的在其官方主页支持基于 Debian 的所有发行版，当然，还有 [Archlinux](https://aur.archlinux.org/packages/linux-xanmod/) 和 [Gentoo](https://gitlab.com/src_prepare/src_prepare-overlay/-/tree/master/sys-kernel/xanmod-sources) 。那么既然已经有 Gentoo 的 overlay 了，我为什么还要做一个 overlay 呢？
 
 1. [src_prepare overlay](https://gitlab.com/src_prepare/src_prepare-overlay) 只提供稳定版本的 Xanmod 内核。而我们作为[Gentoo-zh](https://github.com/microcai/gentoo-zh) 要做出差异化，做出自己的调性；
 2. config 配置文件在内核源码安装后就有了，大家注意源码文件夹中有一个名字叫做 CONFIG 的，从中把大家需要的配置文件拷贝到内核源码目录下，取名 .config 就可以开始编译了；
@@ -21,7 +21,7 @@
 
 Xanmod 内核补丁是目前全网性能最好的，突出表现在响应速度。希望大家喜欢。
 
-[Xanmod vs Xanmod-CaCULE](https://www.youtube.com/watch?v=mNKXumLlxII&t) ，但是大家注意，这里 Xanmod-CaCULE 中使用的是实验性功能的 RDB CPU 调度器，所以性能表现不佳是完全可以理解的。
+[Xanmod vs Xanmod-TT](https://www.youtube.com/watch?v=mNKXumLlxII&t) ，但是大家注意，这里 Xanmod-tt 中使用的是实验性功能的 RDB CPU 调度器，所以性能表现不佳是完全可以理解的。
 
 [BMQ VS PDS VS MuQSS](https://www.youtube.com/watch?v=-qFXu_5T9Dg&t) 。
 
