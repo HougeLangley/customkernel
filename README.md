@@ -29,9 +29,7 @@
 
 最近一段时间第三方内核横品少了，不过就目前大家使用的习惯来看，Xanmod 内核和 Liquorix 是社区性能表现最为优异的。希望大家喜欢。
 
-[Xanmod vs Xanmod-TT](https://www.youtube.com/watch?v=mNKXumLlxII&t) ，但是大家注意，这里 Xanmod-tt 中使用的是实验性功能的 RDB CPU 调度器，所以性能表现不佳是完全可以理解的。
-
-[BMQ VS PDS VS MuQSS](https://www.youtube.com/watch?v=-qFXu_5T9Dg&t) 。
+将来内核的测评我会在有空的时候再更新。
 
 以上就是该 overlay 现在情况，将持续维护。
 
