@@ -30,8 +30,8 @@ REQUIRED_USE="^^ ( xanmod cacule )"
 # If you have been enable src_prepare-overlay
 # please unmerge sys-kernel/xanmod-sources
 RDEPEND="
-	!sys-kernel/xanmod-sources
-	!sys-kernel/xanmod-rt
+	!sys-kernel/xanmod-sources:${PV}
+	!sys-kernel/xanmod-rt:${PV}
 "
 DEPEND="app-arch/cpio"
 
@@ -45,7 +45,7 @@ LICENSE+=" CDDL"
 SRC_URI="
 ${KERNEL_BASE_URI}/linux-5.16.tar.xz
 ${GENPATCHES_URI}
-https://github.com/HougeLangley/customkernel/releases/download/v5.16-patch/patch-5.16.1-xanmod1
+https://github.com/HougeLangley/customkernel/releases/download/v5.16-patch/patch-5.16.2-xanmod1
 https://github.com/HougeLangley/customkernel/releases/download/v5.15-patch/patch-5.15.13-xanmod1-tt
 https://github.com/HougeLangley/customkernel/releases/download/v5.16-patch/v1-cjktty-5.16.patch
 "
@@ -55,14 +55,14 @@ S="${WORKDIR}/linux-${PV}-xanmod"
 
 K_EXTRAEINFO="For more info on xanmod-hybrid and details on how to report problems,	see: ${HOMEPAGE}."
 
-PATCHES=( "${DISTDIR}/patch-5.16.1-xanmod1"
+PATCHES=( "${DISTDIR}/patch-5.16.2-xanmod1"
 "${DISTDIR}/patch-5.15.13-xanmod1-tt"
 "${DISTDIR}/v1-cjktty-5.16.patch" )
 
 src_prepare() {
 	# Default enable Xanmod
 	if	use	xanmod	;	then
-		eapply "${DISTDIR}/patch-5.16.1-xanmod1"	||	die
+		eapply "${DISTDIR}/patch-5.16.2-xanmod1"	||	die
 		eapply "${DISTDIR}/v1-cjktty-5.16.patch"	||	die
 	fi
 	# Enable Xanmod-CaCule
