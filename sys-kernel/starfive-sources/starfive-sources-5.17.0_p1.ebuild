@@ -15,13 +15,12 @@ DEPEND="
 
 inherit kernel-2
 detect_version
-EGIT_COMMIT="b7291fc03413afd87e53df407445c8d0edd3a155"
-SRC_URI="https://github.com/starfive-tech/linux/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/starfive-tech/linux/archive/b7291fc03413afd87e53df407445c8d0edd3a155.tar.gz -> ${P}.tar.gz"
 KEYWORDS="~riscv"
 DESCRIPTION="Linux kernel for StarFive's JH7100 RISC-V SoC"
 HOMEPAGE="https://starfivetech.com"
 
-S="${WORKDIR}/linux-${EGIT_COMMIT}"
+S="${WORKDIR}/linux-b7291fc03413afd87e53df407445c8d0edd3a155}"
 
 K_EXTRAEINFO="For more info on starfive linux and details on how to report problems, see: ${HOMEPAGE}."
 
