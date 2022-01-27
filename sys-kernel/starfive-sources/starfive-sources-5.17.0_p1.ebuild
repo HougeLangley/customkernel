@@ -21,7 +21,7 @@ KEYWORDS="~riscv"
 DESCRIPTION="Linux kernel for StarFive's JH7100 RISC-V SoC"
 HOMEPAGE="https://starfivetech.com"
 
-S="${WORKDIR}/linux-${P}}"
+S="${WORKDIR}/linux-5.17.0-rc1-starfive1"
 
 K_EXTRAEINFO="For more info on starfive linux and details on how to report problems, see: ${HOMEPAGE}."
 
