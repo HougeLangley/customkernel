@@ -56,7 +56,7 @@ KEYWORDS="~amd64"
 
 K_EXTRAEINFO="For more info on liquorix-kernel and details on how to report problems, see: ${HOMEPAGE}."
 
-src_prepare() {
+src_unpack() {
 	UNIPATCH_LIST_DEFAULT="${DISTDIR}/v${OKV}${LQX_VERSION}.patch.xz"
 	UNIPATCH_LIST=""
 	
