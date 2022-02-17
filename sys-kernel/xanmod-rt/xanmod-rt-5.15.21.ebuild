@@ -26,7 +26,7 @@ K_WANT_GENPATCHES="base extras"
 # please unmerge sys-kernel/xanmod-sources
 RDEPEND="
 	!sys-kernel/xanmod-sources
-	!sys-kernel/xanmod-hybrid
+	!sys-kernel/xanmod-edge
 "
 
 inherit kernel-2

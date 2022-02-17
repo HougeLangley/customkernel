@@ -7,6 +7,10 @@ K_GENPATCHES_VER="2"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 ETYPE="sources"
+RDEPEND="
+	!sys-kernel/xanmod-rt
+	!sys-kernel/xanmod-edge
+"
 inherit kernel-2
 detect_version
 
@@ -48,8 +52,15 @@ src_unpack() {
 	kernel-2_src_unpack
 }
 
-src_prepare() {
-	kernel-2_src_prepare
+pkg_setup() {
+	ewarn ""
+	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
+	ewarn "If you need support, please contact the ${HOMEPAGE} directly."
+	ewarn "Do *not* open bugs in Gentoo's bugzilla unless you have issues with"
+	ewarn "the ebuilds. Thank you."
+	ewarn ""
+
+	kernel-2_pkg_setup
 }
 
 pkg_postinst() {

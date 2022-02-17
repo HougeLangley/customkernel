@@ -67,10 +67,6 @@ src_prepare() {
 	kernel-2_src_unpack
 }
 
-src_prepare() {
-	kernel-2_src_prepare
-}
-
 pkg_setup() {
 	ewarn ""
 	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
