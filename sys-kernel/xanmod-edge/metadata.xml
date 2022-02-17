@@ -5,6 +5,6 @@
 		<remote-id type="github">xanmod/linux</remote-id>
 	</upstream>
 	<use>
-		<flag name="cjktty">Eanble cjktty patches.</flag>
+		<flag name="cjk">Eanble cjktty patches.</flag>
 	</use>
 </pkgmetadata>

@@ -10,12 +10,12 @@ ETYPE="sources"
 inherit kernel-2
 detect_version
 
-DESCRIPTION="XanMod sources with or without TT patches and CJKTTY options."
+DESCRIPTION="XanMod sources and CJKTTY options."
 HOMEPAGE="https://xanmod.org
 		https://github.com/zhmars/cjktty-patches"
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
-IUSE="+cjktty"
+IUSE="+cjk"
 SLOT="0"
 XANMOD_VERSION="1"
 XANMOD_URI="https://github.com/xanmod/linux/releases/download/"
@@ -32,7 +32,7 @@ src_unpack() {
 	UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${OKV}${XANMOD_VERSION}.xz"
 	UNIPATCH_LIST=""
 	
-	if use cjktty	;	then
+	if use cjk	;	then
 		UNIPATCH_LIST+=" ${DISTDIR}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch"
 	fi
 

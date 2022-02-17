@@ -42,29 +42,32 @@ detect_version
 
 DESCRIPTION="Liquorix kernel is best one for desktop, multimedia and gaming workloads"
 HOMEPAGE="https://liquorix.net/"
-
+LQX_VERSION="1"
+LQX_URI="https://github.com/zen-kernel/zen-kernel/releases/download/"
+CJKTTY_URI="https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x/"
+OKV="${OKV}-lqx"
 SRC_URI="
-${KERNEL_BASE_URI}/linux-5.16.tar.xz
-${GENPATCHES_URI}
-https://github.com/HougeLangley/customkernel/releases/download/v5.16-patch/v5.16.8-lqx2.patch
-https://github.com/HougeLangley/customkernel/releases/download/v5.16-patch/v1-cjktty-5.16.patch
+	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
+	${GENPATCHES_URI}
+	${LQX_URI}/v${OKV}${LQX_VERSION}/v${OKV}${LQX_VERSION}.patch.xz
+	${CJKTTY_URI}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch
 "
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/linux-${PVR}-liquorix"
-
 K_EXTRAEINFO="For more info on liquorix-kernel and details on how to report problems, see: ${HOMEPAGE}."
 
-UNIPATCH_LIST="${DISTDIR}/v5.16.8-lqx2.patch"
-
-PATCHES="${DISTDIR}/v1-cjktty-5.16.patch"
-
 src_prepare() {
-	# Default enable CJKTTY
-	if	use	cjk	;	then
-		eapply "${DISTDIR}/v1-cjktty-5.16.patch"	||	die
+	UNIPATCH_LIST_DEFAULT="${DISTDIR}/v${OKV}${LQX_VERSION}.patch.xz"
+	UNIPATCH_LIST=""
+	
+	if use cjk	;	then
+		UNIPATCH_LIST+=" ${DISTDIR}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch"
 	fi
 
+	kernel-2_src_unpack
+}
+
+src_prepare() {
 	kernel-2_src_prepare
 }
 
