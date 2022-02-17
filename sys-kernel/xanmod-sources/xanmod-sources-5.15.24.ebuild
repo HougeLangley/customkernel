@@ -15,7 +15,7 @@ HOMEPAGE="https://xanmod.org
 		https://github.com/zhmars/cjktty-patches"
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
-IUSE="+xanmod tt cjktty"
+IUSE="+xanmod tt cjk"
 REQUIRED_USE="^^ ( xanmod tt )"
 SLOT="release"
 XANMOD_VERSION="1"
@@ -41,7 +41,7 @@ src_unpack() {
 		UNIPATCH_LIST+=" ${DISTDIR}/patch-${OKV}${XANMOD_VERSION}-tt.xz"
 	fi
 
-	if use cjktty	;	then
+	if use cjk	;	then
 		UNIPATCH_LIST+=" ${DISTDIR}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch"
 	fi
 
