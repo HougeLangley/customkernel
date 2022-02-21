@@ -23,6 +23,10 @@ HOMEPAGE="https://starfivetech.com"
 
 K_EXTRAEINFO="For more info on starfive linux and details on how to report problems, see: ${HOMEPAGE}."
 
+src_prepare() {
+	kernel-2_src_prepare
+}
+
 pkg_setup() {
 	ewarn ""
 	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
