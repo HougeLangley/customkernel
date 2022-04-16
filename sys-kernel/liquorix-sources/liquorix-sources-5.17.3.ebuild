@@ -10,7 +10,7 @@ ETYPE="sources"
 K_EXP_GENPATCHES_NOUSE="1"
 
 # Just get basic genpatches, -xanmod patch set already includes main updates
-K_GENPATCHES_VER="5"
+K_GENPATCHES_VER="1"
 
 # -xanmod-hybrid already sets EXTRAVERSION to kernel Makefile
 K_NOSETEXTRAVERSION="1"
@@ -57,9 +57,9 @@ KEYWORDS="~amd64"
 K_EXTRAEINFO="For more info on liquorix-kernel and details on how to report problems, see: ${HOMEPAGE}."
 
 src_unpack() {
-	UNIPATCH_LIST_DEFAULT="${DISTDIR}/v${OKV}${LQX_VERSION}.patch.xz"
-	UNIPATCH_LIST=""
+	UNIPATCH_LIST="${DISTDIR}/v${OKV}${LQX_VERSION}.patch.xz"
 	UNIPATCH_STRICTORDER="yes"
+	UNIPATCH_LIST=""	
 	
 	if use cjk	;	then
 		UNIPATCH_LIST+=" ${DISTDIR}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch"
