@@ -59,6 +59,7 @@ K_EXTRAEINFO="For more info on liquorix-kernel and details on how to report prob
 src_unpack() {
 	UNIPATCH_LIST_DEFAULT="${DISTDIR}/v${OKV}${LQX_VERSION}.patch.xz"
 	UNIPATCH_LIST=""
+	UNIPATCH_STRICTORDER="yes"
 	
 	if use cjk	;	then
 		UNIPATCH_LIST+=" ${DISTDIR}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch"
