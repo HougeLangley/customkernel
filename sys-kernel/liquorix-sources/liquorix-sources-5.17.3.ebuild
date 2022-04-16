@@ -10,7 +10,7 @@ ETYPE="sources"
 K_EXP_GENPATCHES_NOUSE="1"
 
 # Just get basic genpatches, -xanmod patch set already includes main updates
-K_GENPATCHES_VER="2"
+K_GENPATCHES_VER="1"
 
 # -xanmod-hybrid already sets EXTRAVERSION to kernel Makefile
 K_NOSETEXTRAVERSION="1"
@@ -20,7 +20,7 @@ K_SECURITY_UNSUPPORTED="1"
 
 # We want the very basic patches from gentoo-sources, experimental patch is
 # already included in xanmod-hybrid
-K_WANT_GENPATCHES="base	extras"
+K_WANT_GENPATCHES="extras"
 
 # Default enable Xanmod, You have to choose one of them.
 # Both of them will make some errors
