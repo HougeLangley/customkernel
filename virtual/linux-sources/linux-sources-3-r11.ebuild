@@ -24,7 +24,9 @@ RDEPEND="
 		sys-kernel/vanilla-kernel
 		sys-kernel/xanmod-lts
 		sys-kernel/xanmod-sources
+		sys-kernel/xanmod-kernel
 		sys-kernel/xanmod-edge
+		sys-kernel/xanmod-hybrid
 		sys-kernel/liquorix-sources
 		sys-kernel/xanmod-rt
 		sys-kernel/starfive-sources
