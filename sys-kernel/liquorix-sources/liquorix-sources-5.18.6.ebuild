@@ -54,7 +54,12 @@ SRC_URI="
 "
 KEYWORDS="~amd64"
 
-K_EXTRAEINFO="For more info on liquorix-kernel and details on how to report problems, see: ${HOMEPAGE}."1913041e5c44ff07ca384346ad8145aeedf77e77cd1cea9ec5d533246691e10c
+K_EXTRAEINFO="For more info on liquorix-kernel and details on how to report problems, see: ${HOMEPAGE}."
+
+src_unpack() {
+	UNIPATCH_LIST="${DISTDIR}/v${OKV}${LQX_VERSION}.patch.xz"
+	UNIPATCH_STRICTORDER="yes"
+	
 	if use cjk	;	then
 		UNIPATCH_LIST+=" ${DISTDIR}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch"
 	fi
