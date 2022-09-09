@@ -28,5 +28,4 @@ RDEPEND="
 		sys-kernel/xanmod-hybrid
 		sys-kernel/liquorix-sources
 		sys-kernel/xanmod-rt
-		sys-kernel/starfive-sources
 	)"
