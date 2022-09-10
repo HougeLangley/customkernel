@@ -42,7 +42,7 @@ detect_version
 
 DESCRIPTION="Liquorix kernel is best one for desktop, multimedia and gaming workloads"
 HOMEPAGE="https://liquorix.net/"
-LQX_VERSION="1"
+LQX_VERSION="2"
 LQX_URI="https://github.com/zen-kernel/zen-kernel/releases/download/"
 CJKTTY_URI="https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x/"
 OKV="${OKV}-lqx"
